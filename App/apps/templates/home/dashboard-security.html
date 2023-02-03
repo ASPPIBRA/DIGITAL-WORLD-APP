@@ -1,0 +1,160 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard Security {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block nav_style %} navbar-light navbar-transparent navbar-theme-secondary {% endblock nav_style %}
+
+{% block content %}
+
+    <div class="section section-lg pt-5 pt-md-7 bg-gray-200">
+        <div class="container">
+            <div class="row pt-5 pt-md-0">
+                
+                {% include 'includes/dashboard-sidebar.html' %}
+
+                <div class="col-12 col-lg-8">
+                    {% if request.user.email %}
+                    <div class="card border-gray-300 p-0 p-md-4 mb-4">
+                        <div class="card-body">
+                            <h3 class="h5 mb-0">Change Password</h3>
+
+                            <form id="changePassForm" class="form mt-5" autocomplete="off">{% csrf_token %}
+
+                                <div class="mb-4">
+                                    <label for="inputPasswordNew">New Password</label>
+                                    <input name="new_password1" type="password" class="form-control" id="inputPasswordNew" required="">
+                                    <span class="form-text small text-muted">
+                                            The password must be 8-20 characters, and must <em>not</em> contain spaces.
+                                        </span>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="inputPasswordNewVerify">
+                                        New Password Confirmation
+                                    </label>
+                                    <input name="new_password2" type="password" class="form-control" id="inputPasswordNewVerify" required="">
+                                    <span class="form-text small text-muted">
+                                            To confirm, type the new password again.
+                                        </span>
+                                </div>
+                                <div class="mt-2 d-flex gap-3">
+                                    <div>
+                                        <button type="submit" class="btn btn-dark">Save</button>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p id="password-alert" class="mb-0"></p></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="card card-body bg-white border-gray-300 p-0 p-md-4">
+                        <div class="card-header bg-white border-0">
+                            <div class="row d-block d-md-flex align-items-center">
+                                <div class="col">
+                                    <h3 class="h5">Delete Account</h3>
+
+                                    <p id="delete-alert" class="small">
+                                        Please confirm your account deletion.
+                                    </p>
+
+                                    <div class="form-check form-switch">
+                                        <input id="confirmDeleteAccount" class="form-check-input" type="checkbox" >
+                                        <label class="form-check-label" for="flexSwitchCheckNotifi1"></label>
+                                    </div>
+
+                                </div>
+                                <div class="col-auto">
+                                    <form id="deleteForm"> {% csrf_token %}
+                                    <button disabled type="submit" id="deleteAccountBtn" class="btn btn-danger" >
+                                        DELETE
+                                    </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+    <script>
+        if ( !! document.getElementById('changePassForm'))
+            document.getElementById('changePassForm').onsubmit = (e) => {
+
+                e.preventDefault()
+                const csrfToken = document.querySelector('input[name=csrfmiddlewaretoken]').value
+                const alert     = document.getElementById('password-alert')
+
+                fetch (`/change_password/`, {
+                    method: "POST",
+                    body: new FormData(e.target),
+                    headers: {'X-CSRFToken' : csrfToken}
+                })
+                    .then((response) => {
+                        if(!response.ok) {
+                            return response.text().then(text => { throw new Error(text) })
+                        } else {
+                            return response.text()
+                        }
+                    })
+                    .then((result) => {
+                        console.log(result)
+                        const error = JSON.parse(result.toString().replace('Error: ','')).message
+                        alert.textContent = error
+                        alert.classList.remove('text-danger');
+                        alert.classList.add('text-success');
+                        e.target.reset();         
+                    })
+                    .catch((err) => {
+                        console.log(err)
+                        const errors = JSON.parse(err.toString().replace('Error: ','')).message 
+                        key = Object.keys(errors)[0]
+                        alert.textContent = 'Error:' + errors[ key ][0]
+                        alert.classList.remove('text-success')
+                        alert.classList.add('text-danger')
+                    })
+            }
+
+        // delete account
+        document.getElementById('confirmDeleteAccount').onchange = (e) => {
+            document.getElementById('deleteAccountBtn').disabled = !e.target.checked
+        }
+
+        document.getElementById('deleteForm').onsubmit = (e) => {
+
+            e.preventDefault()
+
+            const csrfToken = document.querySelector('input[name=csrfmiddlewaretoken]').value
+            const alert     = document.getElementById('delete-alert')             
+
+            fetch (`/delete_account/`, {
+                method: "DELETE",
+                headers: {'X-CSRFToken' : csrfToken}
+            })
+                .then((response) => {
+                    if(!response.ok) {
+                        return response.text().then(text => { throw new Error(text) })
+                    } else {
+                        return response.text()
+                    }
+                })
+                .then((result) => {
+                    location.reload()
+                })
+                .catch((err) => {
+                    console.log(err)
+                    const error = JSON.parse(err.toString().replace('Error: ','')).errors
+                    alert.textContent = error
+                    alert.classList.add('text-danger') 
+                })
+        }
+    </script>
+{% endblock javascripts %}

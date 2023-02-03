@@ -1,0 +1,168 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Careers {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block nav_style %} navbar-dark navbar-theme-secondary {% endblock nav_style %}
+
+{% block content %}
+
+    <!-- Hero -->
+    <section class="section-header pb-9 pb-lg-10 mb-4 mb-lg-6 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-lg-7">
+                    <h1 class="display-1 font-weight-extreme mb-4">Junte-se à nossa equipe</h1>
+                    <p class="lead mb-4 mb-lg-5 me-lg-5">Somos uma equipe de profissionais desenvolvedores de soluções que criam ferramentas e conteúdo para impulsionar o desenvolvimento da sociedade moderna. Estamos aqui para produzir um trabalho que cause impacto.</p>
+                    <a class="btn btn-tertiary" href="#">Find Our Works <span class="fas fa-angle-right ms-2"></span></a>
+                </div>
+                <div class="col-12 col-md-5 d-none d-lg-block text-center"><img src="{{ ASSETS_ROOT }}/img/illustrations/meditating.svg" alt="girl meditating"></div>
+            </div>
+            </div>
+    </section>
+    <section class="section section-lg pt-0">
+        <div class="container mt-n8 mt-lg-n10 z-2">
+            <div class="row">   
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card bg-white shadow border-gray-300 p-4">
+                        <div class="card-body p-3">
+                            <div class="icon icon-lg icon-primary justify-content-start mb-3">
+                                <span class="fas fa-award"></span>
+                            </div>
+                            <h4 class="mb-4">Autenticidade</h4>
+                            <p>Colocamos nossa alma em tudo o que fazemos e nos orgulhamos de nós mesmos e de nossas visões. É por isso que criamos as coisas à nossa maneira.</p>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card bg-white shadow border-gray-300 p-4">
+                        <div class="card-body p-3">
+                            <div class="icon icon-lg icon-primary justify-content-start mb-3">
+                                <span class="fab fa-leanpub"></span>
+                            </div>
+                            <h4 class="mb-4">Credibilidade</h4>
+                            <p>Respeitamos a confiança que nossos parceiros depositam em nós e assumimos a responsabilidade de atender à impressão criada em suas mentes.</p>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card bg-white shadow border-gray-300 p-4">
+                        <div class="card-body p-3">
+                            <div class="icon icon-lg icon-primary justify-content-start mb-3">
+                                <span class="fas fa-glasses"></span>
+                            </div>
+                            <h4 class="mb-4">Transparência</h4>
+                            <p>Sem barreiras. Trabalhamos em estreita colaboração com os nossos parceiros para criar projetos de valor. Quando surgem problemas, abordamos juntos e conversamos livremente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg pt-0">
+        <div class="container">
+            <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="col-12 text-center">
+                    <h2 class="h1 mb-3">Vagas Abertas</h2>
+                    <p class="lead px-5 px-lg-7">Estamos sempre procurando profissionais criativos apaixonados e talentos em ascensão para se juntar a nossa DAO. Confira nossas vagas em aberto e preencha um cadastro.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card bg-white shadow border-gray-300">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                                    <h3 class="mb-3">Engenheiro de Back-end</h3>
+                                    <p class="text-gray mb-4">
+                                        Integração de elementos voltados para o usuário desenvolvidos por desenvolvedores front-end com lógica do lado do servidor
+                                    </p>
+                                    <div class="d-sm-flex">
+                                        <a href="/page-career-single.html"><span class="fas fa-map-marker-alt"></span><span class="h6 text-sm ms-2">Sillicon Valley, CA</span></a>
+                                        <div class="ms-sm-4 mt-1 mt-sm-0"><span class="fas fa-user-tie text-secondary"></span><span class="h6 text-sm ms-2">Full Time</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end">
+                                    <a href="/page-career-single.html#apply"  class="btn btn-secondary me-3 animate-up-2 m-0">Aplicar</a>
+                                    <a href="/page-career-single.html"  class="btn btn-primary animate-up-2 m-0"><i class="fas fa-clipboard-list me-2"></i>Veja detalhes</a>                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card bg-white shadow border-gray-300">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                                    <h3 class="mb-3">Gerente de Contas</h3>
+                                    <p class="text-gray mb-4">
+                                        Garantir a entrega oportuna e bem-sucedida de nossas soluções de acordo com as necessidades e objetivos do cliente.
+                                    </p>
+                                    <div class="d-sm-flex">
+                                        <a href="/page-career-single.html"><span class="fas fa-map-marker-alt"></span><span class="h6 text-sm ms-2">Austin, TX</span></a>
+                                        <div class="ms-sm-4 mt-1 mt-sm-0"><span class="fas fa-user-tie text-secondary"></span><span class="h6 text-sm ms-2">Full Time</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end">
+                                    <a href="/page-career-single.html#apply"  class="btn btn-secondary me-3 animate-up-2 m-0">Aplicar</a>
+                                    <a href="/page-career-single.html"  class="btn btn-primary animate-up-2 m-0"><i class="fas fa-clipboard-list me-2"></i>Veja detalhes</a>                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card bg-white shadow border-gray-300">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                                    <h3 class="mb-3">Especialista em Relações Públicas</h3>
+                                    <p class="text-gray mb-4">
+                                        Ajude a manter imagem, voz, identidade e presença por meio de canais online e offline
+                                    </p>
+                                    <div class="d-sm-flex">
+                                        <a href="/page-career-single.html"><span class="fas fa-map-marker-alt"></span><span class="h6 text-sm ms-2">Boston, MS</span></a>
+                                        <div class="ms-sm-4 mt-1 mt-sm-0"><span class="fas fa-user-tie text-secondary"></span><span class="h6 text-sm ms-2">Full Time</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end">
+                                    <a href="/page-career-single.html#apply"  class="btn btn-secondary me-3 animate-up-2 m-0">Aplicar</a>
+                                    <a href="/page-career-single.html"  class="btn btn-primary animate-up-2 m-0"><i class="fas fa-clipboard-list me-2"></i>Veja detalhes</a>                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card bg-white shadow border-gray-300">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                                    <h3 class="mb-3">Desenvolvedor Front-end</h3>
+                                    <p class="text-muted mb-4">
+                                        Crie novos recursos voltados para o usuário, otimize o aplicativo para máxima velocidade e escalabilidade
+                                    </p>
+                                    <div class="d-sm-flex">
+                                        <a href="/page-career-single.html"><span class="fas fa-map-marker-alt"></span><span class="h6 text-sm ms-2">Sillicon Valley, CA</span></a>
+                                        <div class="ms-sm-4 mt-1 mt-sm-0"><span class="fas fa-user-tie text-secondary"></span><span class="h6 text-sm ms-2">Full Time</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end">
+                                    <a href="/page-career-single.html#apply"  class="btn btn-secondary me-3 animate-up-2 m-0">Aplicar</a>
+                                    <a href="/page-career-single.html"  class="btn btn-primary animate-up-2 m-0"><i class="fas fa-clipboard-list me-2"></i>Veja detalhes</a>                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
