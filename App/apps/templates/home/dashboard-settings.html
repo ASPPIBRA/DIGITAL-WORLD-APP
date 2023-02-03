@@ -45,10 +45,10 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="gender">Gender</label>
+                                            <label for="gender">Genero</label>
                                             <select class="form-select" id="gender" name="gender" aria-label="Default select example">
-                                                <option value="0">Female</option>
-                                                <option value="1">Male</option>
+                                                <option value="0">Masculino</option>
+                                                <option value="1">Feminino</option>
                                             </select>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
                                                 <label for="phone">Telefone</label>
-                                                <input class="form-control" value="{{ request.user.phone }}" id="phone" name="phone" type="number" placeholder="+12-345 678 910">
+                                                <input class="form-control" value="{{ request.user.phone }}" id="phone" name="phone" type="number" placeholder="+55 9 1234-5678">
                                             </div>
                                         </div>
                                     </div>
@@ -97,6 +97,7 @@
                                         <div class="col-sm-4 mb-3">
                                             <label for="country2">Country</label>
                                             <select class="form-select" id="country2" name="country" aria-label="Default select example">
+                                                <option>Brasil</option>
                                                 <option>United States</option>
                                                 <option>Germany</option>
                                                 <option>France</option>
