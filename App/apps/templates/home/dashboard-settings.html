@@ -48,7 +48,7 @@
                                             <label for="gender">Genero</label>
                                             <select class="form-select" id="gender" name="gender" aria-label="Default select example">
                                                 <option value="0">Masculino</option>
-                                                <option value="1">Feminino</option>
+                                                <option value="1">Feminino  </option>
                                             </select>
                                         </div>
                                     </div>
@@ -61,8 +61,8 @@
                                                     <label class="text-danger" for="email">Email (not provided)</label>
                                                 {% endif %}
                                                 <input {% if request.user.email %}readonly="readonly"{% endif %} 
-                                                       class="form-control {% if not request.user.email %} is-invalid {% endif %}" 
-                                                       value="{{ request.user.email }}" id="email" name="email" type="email" placeholder="name@company.com">
+                                                        class="form-control {% if not request.user.email %} is-invalid {% endif %}" 
+                                                        value="{{ request.user.email }}" id="email" name="email" type="email" placeholder="name@company.com">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
