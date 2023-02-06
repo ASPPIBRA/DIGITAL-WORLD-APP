@@ -1,60 +1,18 @@
-<br />
+# World_Digital_App
 
-![Pixel Bootstrap PRO - Full-Stack Starter gerado pelo AppSeed](https://user-images.githubusercontent.com/51070104/168760719-f0e45406-2b2a-43e0-badf-fa953edb62b8.png)
+Interplanetary Property Registration Platform on the Web
 
-<br />
-
-## ✨ Estrutura da base de código
-
-O projeto é codificado usando uma estrutura simples e intuitiva apresentada a seguir:
-
-```bash
-<PROJETO RAIZ>
-    |
-    |-- core/ # Implementa a configuração do aplicativo
-    | |-- settings.py # Define configurações globais
-    | |-- wsgi.py # Inicia o aplicativo em produção
-    | |-- urls.py # Definir URLs servidos por todos os aplicativos/nós
-    |
-    |-- aplicativos/
-    | |
-    | |-- home/ # Um aplicativo simples que serve arquivos HTML
-    | | |-- views.py # Serve páginas HTML para usuários autenticados
-    | | |-- urls.py # Defina algumas rotas super simples
-    | |
-    | |-- authentication/ # Lida com rotas de autenticação (login e registro)
-    | | |-- urls.py # Definir rotas de autenticação
-    | | |-- views.py # Lida com login e registro
-    | | |-- forms.py # Definir formulários de autenticação (login e registro)
-    | |
-    | |-- estático/
-    | | |-- <css, JS, imagens> # arquivos CSS, arquivos Javascripts
-    | |
-    | |-- templates/ # Modelos usados para renderizar páginas
-    | |-- includes/ # Blocos e componentes HTML
-    | | |-- navigation.html # Componente do menu principal
-    | | |-- sidebar.html # Componente da barra lateral
-    | | |-- footer.html # App Footer
-    | | |-- scripts.html # Scripts comuns a todas as páginas
-    | |
-    | |-- layouts/ # páginas mestras
-    | | |-- base-fullscreen.html # Usado por páginas de autenticação
-    | | |-- base.html # Usado por páginas comuns
-    | |
-    | |-- contas/ # páginas de autenticação
-    | | |-- login.html # Página de login
-    | | |-- register.html # Página de registro
-    | |
-    | |-- home/ # Páginas do kit de interface do usuário
-    | |-- index.html # Página de índice
-    | |-- 404-page.html # 404 página
-    | |-- *.html # Todas as outras páginas
-    |
-    |-- requisitos.txt # Módulos de desenvolvimento - armazenamento SQLite
-    |
-    |-- .env # Injetar configuração via ambiente
-    |-- manage.py # Inicia o aplicativo - script de inicialização padrão do Django
-    |
-    |-- *********************************************** *************
-```
-
+The project is an ambitious venture that aims to create a humanitarian, real estate and consumer goods registry platform, as well as decentralized services.
+The ultimate goal is to provide secure services and decentralized trading at internet speed while at the same time ensuring the validation of metadata autonomously through algorithms and artificial intelligence. 
+In other words, this project intends to revolutionize the way the world is currently registered! The platform is being built using blockchain and will utilize smart contracts to ensure security and efficiency. 
+The project is still in its early stages, but the team is confident it will be able to deliver on its promises. 
+If successful, this could be a game-changer for many industries. World Digital App is an open source project that aims to create a decentralized economy and a society without borders.
+In the World Digital App you will receive an IPFS identity, this interplanetary identity, you will have all your data and your ancestors registered, allowing the knowledge of your family tree.
+Thus giving greater guarantee to Inheritance contracts, lifetime rights over physical and intellectual properties, Image Rights, Voice Rights, Insurance and Policies, this identity will give the user the right to market their goods in a safe and audited way, on a global scale. 
+The World Digital App will use artificial intelligence to produce the documents needed to create a Decentralized World Real Estate Market with secure and dynamic property registration, accelerating the Digital Hype economy. 
+World Digital App will be divided into two currencies, "BITCOIN", will be the official currency of the system, "BITCOIN" was created to meet the World economy. 
+The "ASPPBR" Token was created for the governance system and guaranteed rewards to the community of project supporters. These two currencies will be backed by the dollar exchange rate, and you can convert one to the other.
+The World Digital App System will be divided into 2 parts, the first part is the Future Swap market, the World Digital App will allow anyone to trade from anywhere in the world after registration, the second part is Meta World will be a decentralized social network, 
+which will allow communication between people from anywhere in the world using Artificial Intelligence, to translate the conversation into the native languages ​​of the users. 
+The project is currently in the testing phase, but you can secure your new interplanetary document. The World Digital App Project is currently in the Private Pre-Sale phase. 
+More information can be found on the website, www.asppibra.com.br/ Encryption Token (ASPPBR).
