@@ -191,7 +191,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 12
+SITE_ID = 11
 
 SERVER = env('SERVER', default='127.0.0.1')
 
