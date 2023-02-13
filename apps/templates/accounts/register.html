@@ -31,13 +31,13 @@
                         <div class="text-center text-md-center mb-4 mt-md-0">
                             <h2 class="mb-0 h3">
                                 <a target="_blank" rel="noopener noreferrer" 
-                                    href="https://appseed.us/product/pixel-bootstrap-pro/django/">Django Pixel PRO</a> - Sign UP
+                                    href="https://appseed.us/product/pixel-bootstrap-pro/django/">Mundo Digital</a> - Cadastre-se
                             </h2>
                             <p class="text-center">
                                 {% if msg %}
                                     <span class="text-danger">{{ msg | safe }}</span>
                                 {% else %}
-                                    Add your credentials
+                                Adicione suas credenciais
                                 {% endif %}  
                             </p>                              
                         </div>
@@ -56,7 +56,7 @@
 
                                 <!-- Form -->
                                 <div class="form-group mb-4">
-                                    <label for="email">Username</label>
+                                    <label for="email">Nome de usuário</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon3"><span class="fas fa-user"></span></span>
                                         {{ form.username }}
@@ -79,7 +79,7 @@
                                 <div class="form-group">
                                     <!-- Form -->
                                     <div class="form-group mb-4">
-                                        <label for="password">Password</label>
+                                        <label for="password">Senha</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
                                             {{ form.password1 }}
@@ -98,7 +98,7 @@
 
                                     <!-- Form -->
                                     <div class="form-group mb-4">
-                                        <label for="password">Password Check</label>
+                                        <label for="password">Repita a senha</label>
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
                                             {{ form.password2 }}
@@ -114,18 +114,18 @@
                                     <div class="form-check mb-4">
                                         <input class="form-check-input" type="checkbox" value="" id="terms">
                                         <label class="form-check-label" for="terms">
-                                            I agree to the <a href="#">terms and conditions</a>
+                                            Eu concordo com os <a href="#">termos e condições</a>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" name="register" class="btn btn-block btn-primary">Sign Up</button>
+                                    <button type="submit" name="register" class="btn btn-block btn-primary">Registrar</button>
                                 </div>
                             </form>
                             <div class="d-flex justify-content-center align-items-center mt-4">
                                 <span class="font-weight-normal">
-                                    Already registered?
-                                    <a href="{% url 'login' %}" class="font-weight-bold">Sign IN</a>
+                                    Já registrado?
+                                    <a href="{% url 'login' %}" class="font-weight-bold"> Entrar</a>
                                 </span>
                             </div>
 
@@ -140,8 +140,8 @@
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <br />    
                     <span class="text-white font-small"> 
-                        &copy; <a target="_blank" rel="noopener noreferrer" href="https://themesberg.com/?ref=appseed">Themesberg</a> 
-                        - coded by <a target="_blank" rel="noopener noreferrer" href="https://appseed.us">AppSeed</a>.
+                        &copy; <a target="_blank" rel="noopener noreferrer" href="https://asppibra.com.br/">World Digital</a> 
+                        - coded by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ASPPIBRA_ORG">Asppibra</a>.
                     </span>
                 </div>                 
             </div>

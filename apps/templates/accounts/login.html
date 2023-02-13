@@ -1,6 +1,6 @@
 {% extends "layouts/base-fullscreen.html" %}
 
-{% block title %} Sign IN {% endblock %} 
+{% block title %} Entrar {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -16,13 +16,13 @@
                         <div class="text-center text-md-center mb-4 mt-md-0">
                             <h2 class="mb-0 h3">
                                 <a target="_blank" rel="noopener noreferrer" 
-                                    href="https://">Mundo Digital</a> - Sign IN
+                                    href="https://">Mundo Digital</a> - Entrar
                             </h2>
                             <p class="text-center">
                                 {% if msg %}
                                     <span class="text-danger">{{ msg | safe }}</span>
                                 {% else %}
-                                    Add your credentials
+                                    Adicione suas credenciais
                                 {% endif %}  
                             </p>                              
                         </div>
@@ -32,7 +32,7 @@
                             {% if github_login %}
                                 <form method="post" action="/social_login/github/login/?next=%2F">{% csrf_token %}
                                     <button class="btn btn-github" type="submit" aria-label="github button" title="Github Sign IN">
-                                        <span aria-hidden="true" class="fab fa-github"></span> Github SignIN
+                                        <span aria-hidden="true" class="fab fa-github"></span> Github Entrar
                                     </button>
                                 </form>
                             {% endif %}
@@ -42,7 +42,7 @@
                             {% if twitter_login %}
                                 <form method="post" action="/social_login/twitter/login/?next=%2F">{% csrf_token %}
                                     <button class="btn btn-twitter" type="submit" aria-label="twitter button" title="Twitter Sign IN">
-                                        <span aria-hidden="true" class="fab fa-twitter"></span> Twitter SignIN
+                                        <span aria-hidden="true" class="fab fa-twitter"></span> Twitter Entrar
                                     </button>
                                 </form>
                             {% endif %}                            
@@ -53,7 +53,7 @@
 
                             <!-- Form -->
                             <div class="form-group mb-4">
-                                <label for="email">Username</label>
+                                <label for="email">Nome de usuário</label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="basic-addon1"><span class="fas fa-user"></span></span>
                                     {{ form.username }}
@@ -63,7 +63,7 @@
                             <div class="form-group">
                                 <!-- Form -->
                                 <div class="form-group mb-4">
-                                    <label for="password">Password</label>
+                                    <label for="password">Senha</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
                                         {{ form.password }}
@@ -74,20 +74,20 @@
                                     <div class="form-check mb-0">
                                         <input class="form-check-input" type="checkbox" value="" id="remember">
                                         <label class="form-check-label mb-0" for="remember">
-                                            Remember me
+                                            Lembre de mim
                                         </label>
                                     </div>
-                                    <div><a href="#" class="small text-right">Lost password?</a></div>
+                                    <div><a href="#" class="small text-right">Senha perdida?</a></div>
                                 </div>
                             </div>
                             <div class="d-grid">
-                                <button type="submit" name="login" class="btn btn-block btn-primary">Sign in</button>
+                                <button type="submit" name="login" class="btn btn-block btn-primary">Entrar</button>
                             </div>
                         </form>
                         <div class="d-flex justify-content-center align-items-center mt-4">
                             <span class="font-weight-normal">
-                                Not registered?
-                                <a href="{% url 'register' %}" class="font-weight-bold">Create account</a>
+                                Não registrado? 
+                                <a href="{% url 'register' %}" class="font-weight-bold">Criar uma conta</a>
                             </span>
                         </div>
                     </div>
@@ -99,8 +99,8 @@
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <br />    
                     <span class="text-white font-small"> 
-                        &copy; <a target="_blank" rel="noopener noreferrer" href="https://">World Digital</a> 
-                        - coded by <a target="_blank" rel="noopener noreferrer" href="https://">ASPPIBRA-DAO</a>.
+                        &copy; <a target="_blank" rel="noopener noreferrer" href="https://asppibra.com.br/">World Digital</a> 
+                        - coded by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ASPPIBRA_ORG">ASPPIBRA-DAO</a>.
                     </span>
                 </div>                  
             </div>
