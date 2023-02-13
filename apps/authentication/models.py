@@ -14,4 +14,4 @@ class CustomUser(AbstractUser):
     city = models.CharField(max_length=50, default='', blank=True)
     country = models.CharField(max_length=50, default='', blank=True)
     zipcode = models.CharField(max_length=10, default='', blank=True)
-    image = models.URLField(default='')
+    image = models.ImageField(upload_to='profile_user', null=True)

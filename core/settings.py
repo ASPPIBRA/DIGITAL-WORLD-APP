@@ -1,14 +1,15 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
+ASPPIBRA-DAO
 """
 
 import os, environ
 import sys
+import django_heroku
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=(bool, True)  
 )
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -159,7 +160,7 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "authentication.CustomUser"
 #############################################################
-
+'''
 if os.getenv("FTP_UPLOAD", default=False):
     try:
         DEFAULT_FILE_STORAGE = os.getenv("upload_cloud_type")
@@ -175,6 +176,7 @@ if os.getenv("FTP_UPLOAD", default=False):
 
         FTP_UPLOAD = False
         print('FTP credentials not set in the environment')
+'''
 
 GITHUB_CLIENT_ID = os.getenv('GITHUB_ID', None)
 GITHUB_SECRET = os.getenv('GITHUB_SECRET', None)
@@ -215,3 +217,8 @@ if TWITTER_AUTH:
             'key': ''
         }
     }
+
+django_heroku.settings(locals())
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
