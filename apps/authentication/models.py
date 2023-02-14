@@ -4,6 +4,7 @@ ASPPIBRA-DAO
 """
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 class CustomUser(AbstractUser):
     birthday = models.DateField(null=True, blank=True)
@@ -15,3 +16,6 @@ class CustomUser(AbstractUser):
     country = models.CharField(max_length=50, default='', blank=True)
     zipcode = models.CharField(max_length=10, default='', blank=True)
     image = models.ImageField(upload_to='profile_user', null=True)
+    email = models.EmailField(_('email address'), unique=True,
+        error_messages={
+            'unique': _("A user with that email already exists."),},)

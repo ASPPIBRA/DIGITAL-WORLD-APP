@@ -191,9 +191,11 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 11
+SITE_ID = 12
 
 SERVER = env('SERVER', default='127.0.0.1')
+
+DOMAIN = env('DOMAIN', default='127.0.0.1:8000')
 
 if DEBUG:
     ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http' if sys.argv[1] == 'runserver' else 'https'
@@ -222,3 +224,11 @@ django_heroku.settings(locals())
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+EMAIL_BACKEND = env('EMAIL_BACKEND')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')

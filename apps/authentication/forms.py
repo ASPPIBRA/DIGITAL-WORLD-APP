@@ -6,7 +6,8 @@ ASPPIBRA-DAO
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from django.core.exceptions import ValidationError
+from django.contrib.auth import get_user_model
 from apps.authentication.models import CustomUser
 
 
@@ -60,3 +61,15 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = CustomUser
         fields = ('username', 'email', 'password1', 'password2')
+
+
+class RecoveryForm(forms.Form):
+    email = forms.EmailField(max_length=254)
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        user = get_user_model().objects.filter(email=email)
+
+        if not user.exists():
+            raise ValidationError('Não há nenhum usuário com este e-mail')
+        return email
