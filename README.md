@@ -2,7 +2,10 @@
 
 Interplanetary Property Registration Platform on the Web
 
+![ASPPIBRA_website_for_crypto_UI_UX_UIUX_website_9bcc574f-ad18-4748-a704-382935e1bdef](https://user-images.githubusercontent.com/80177249/230800966-3aeda41f-b45d-413e-b66c-022cba3eea68.png)
+
 The project is an ambitious venture that aims to create a humanitarian, real estate and consumer goods registry platform, as well as decentralized services.
+
 The ultimate goal is to provide secure services and decentralized trading at internet speed while at the same time ensuring the validation of metadata autonomously through algorithms and artificial intelligence. 
 In other words, this project intends to revolutionize the way the world is currently registered! The platform is being built using blockchain and will utilize smart contracts to ensure security and efficiency. 
 The project is still in its early stages, but the team is confident it will be able to deliver on its promises. 
