@@ -1,7 +1,5 @@
 {% extends "layouts/base.html" %}
 
-{% load static %}
-
 {% block title %} Dashboard Settings {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
@@ -26,13 +24,13 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
-                                                <label for="first_name">Primeiro Nome</label>
+                                                <label for="first_name">First Name</label>
                                                 <input name="first_name" value="{{ request.user.first_name }}" class="form-control" id="first_name" type="text" placeholder="Enter your first name" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
-                                                <label for="last_name">Sobrenome</label>
+                                                <label for="last_name">Last Name</label>
                                                 <input class="form-control" value="{{ request.user.last_name }}" id="last_name" name="last_name" type="text" placeholder="Also your last name" required>
                                             </div>
                                         </div>
@@ -40,15 +38,15 @@
                                     <div class="row align-items-center">
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
-                                                <label for="birthday">Aniversário</label>
-                                                <input class="form-control" value="{% if request.user.birthday %}{{ request.user.birthday|date:'d/m/Y'}}{% endif %}" placeholder="Selecione sua data de nascimento" type="date-local" name="birthday" id="birthday">
+                                                <label for="birthday">Birthday</label>
+                                                <input class="form-control" value="{% if request.user.birthday %}{{ request.user }}{% endif %}" data-datepicker="" placeholder="Select your birth date" type="text" name="birthday" id="birthday">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="gender">Genero</label>
+                                            <label for="gender">Gender</label>
                                             <select class="form-select" id="gender" name="gender" aria-label="Default select example">
-                                                <option value="0">Masculino</option>
-                                                <option value="1">Feminino  </option>
+                                                <option value="0">Female</option>
+                                                <option value="1">Male</option>
                                             </select>
                                         </div>
                                     </div>
@@ -61,14 +59,14 @@
                                                     <label class="text-danger" for="email">Email (not provided)</label>
                                                 {% endif %}
                                                 <input {% if request.user.email %}readonly="readonly"{% endif %} 
-                                                        class="form-control {% if not request.user.email %} is-invalid {% endif %}" 
-                                                        value="{{ request.user.email }}" id="email" name="email" type="email" placeholder="name@company.com">
+                                                       class="form-control {% if not request.user.email %} is-invalid {% endif %}" 
+                                                       value="{{ request.user.email }}" id="email" name="email" type="email" placeholder="name@company.com">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
-                                                <label for="phone">Telefone</label>
-                                                <input class="form-control" value="{{ request.user.phone }}" id="phone" name="phone" type="number" placeholder="+55 9 1234-5678">
+                                                <label for="phone">Phone</label>
+                                                <input class="form-control" value="{{ request.user.phone }}" id="phone" name="phone" type="number" placeholder="+12-345 678 910">
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +80,7 @@
                                         </div>
                                         <div class="col-sm-3 mb-3">
                                             <div class="mb-3">
-                                                <label for="number">Numero</label>
+                                                <label for="number">Number</label>
                                                 <input class="form-control" value="{{ request.user.number }}" id="number" name="number" type="number" placeholder="No.">
                                             </div>
                                         </div>
@@ -97,7 +95,6 @@
                                         <div class="col-sm-4 mb-3">
                                             <label for="country2">Country</label>
                                             <select class="form-select" id="country2" name="country" aria-label="Default select example">
-                                                <option>Brasil</option>
                                                 <option>United States</option>
                                                 <option>Germany</option>
                                                 <option>France</option>
@@ -132,7 +129,7 @@
                                     <div class="col-lg-1 mb-2 mb-lg-0">
                                         <!-- Avatar -->
                                         <div class="avatar-lg">
-                                            <img class="rounded-circle" id="avatar-img" src="{% if user.image%}{% get_media_prefix %}{{user.image}}{% else %}{{ ASSETS_ROOT }}/img/team/profile-picture-3.jpg{% endif %}" alt="change avatar">
+                                            <img class="rounded-circle" id="avatar-img" src="{% if user.image%}{{user.image}}{% else %}{{ ASSETS_ROOT }}/img/team/profile-picture-3.jpg{% endif %}" alt="change avatar">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mb-3 mb-lg-0">
@@ -156,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </div>
@@ -166,7 +163,6 @@
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
     <script>
-
         document.getElementById('changeInfoForm').onsubmit = (e) => {
 
             e.preventDefault()
@@ -202,7 +198,7 @@
         // avatar
         document.getElementById('avatar-input').onchange = (e) => {
             document.getElementById('avatar-img').setAttribute('src', URL.createObjectURL(e.target.files[0]))
-        }   
+        }
 
         document.getElementById('changeAvatarForm').onsubmit = (e) => {
 
@@ -232,14 +228,5 @@
                     alert.classList.add('text-danger');
                 })
         }
-
-
     </script>
-    <script defer>
-        const elem = document.querySelector('#birthday');
-        const datepicker = new Datepicker(elem, {
-            'format': 'dd/mm/yyyy',
-        });
-    </script>
-                
 {% endblock javascripts %}
