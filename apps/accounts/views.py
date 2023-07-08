@@ -7,7 +7,7 @@ from apps.accounts.forms import EditProfileForm
 
 def edit_profile(request):
     if request.method == 'GET':
-        return render(request, 'home/dashboard-settings.html')
+        return render(request, 'home/user-settings.html')
     form = EditProfileForm(request.POST, instance=request.user)
     print(form.data)
     print(form.errors)
