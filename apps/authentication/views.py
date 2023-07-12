@@ -1,7 +1,12 @@
 # -*- encoding: utf-8 -*-
+
 """
-ASPPIBRA-DAO
+Copyright (c) 2019 - AppSeed.us
+
+New version of the App updated 2023 by - ASPPIBRA-DAO
+
 """
+
 # Create your views here.
 from django.contrib.auth.forms import SetPasswordForm
 from django.contrib.auth import views as auth_views

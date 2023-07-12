@@ -1,7 +1,12 @@
 # -*- encoding: utf-8 -*-
+
 """
-ASPPIBRA-DAO
+Copyright (c) 2019 - AppSeed.us
+
+New version of the App updated 2023 by - ASPPIBRA-DAO
+
 """
+
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include  # add this
