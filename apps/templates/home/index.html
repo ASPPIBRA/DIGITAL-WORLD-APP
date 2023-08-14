@@ -1,75 +1,374 @@
-{% extends "layouts/base-fullscreen.html" %}
+{% extends "layouts/base.html" %}
 
-{% block title %} Whitelist {% endblock %} 
+{% block title %} Home {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
+{% block nav_style %} navbar-light navbar-theme-secondary {% endblock nav_style %}
+
 {% block content %}
+
     <!-- Hero -->
-    <section class="section section-header pb-6 bg-primary text-white overflow-hidden z-2">
-        <div class="container z-2">
-            <div class="row justify-content-center mb-2">
-                <div class="col-lg-8 col-xl-8">
-                    <div class="text-center">
-                        <h1 class="display-2 mb-3">Come explore the digital world!</h1>
-                        <p class="lead text-muted">Our Application is <span class="text-italic">under construction</span>. <br>
-                            <strong>sign up</strong> to secure your early access.</p>
+    <section class="section section-header bg-primary-app text-dark pb-md-10">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="display-2 mb-4">Welcome  <span class="text-secondary-app fw-bold">To the digital world.</span>
+                    </h1>
+                    <p class="lead text-gray mb-1">Engage in worldwide digital inclusion by joining a network composed of the most influential figures of our generation. 
+                        Together, we are reshaping the dynamics of human interaction and fundamentally transforming the business transaction paradigm. 
+                        Connect with individuals across the globe, seamlessly exchanging messages, photos, and calls, all while ensuring swift and secure negotiations, 
+                        from any corner of the planet.
+                    </p>                    
+                    <div class="d-flex flex-wrap mt-4 mt-lg-5">                        
                     </div>
-                    <form class="row d-flex align-items-top justify-content-center mt-5" method="post" action="{% url 'register' %}">
-                        {% csrf_token %}
-                        <div class="col-12 col-xl-10">
-                            <div class="form-group">
-                                <label class="h6" for="email">Email address</label>
-                                <div class="d-flex flex-row justify-content-center">
-                                    <input class="form-control form-control-lg border-0 rounded" id="email" name="email" placeholder="name@company.com" type="email" required>
-                                    <button type="submit" class="btn btn-tertiary btn-lg ms-2">Subscribe</button>
-                                </div>
-                            </div>
-                            <p class="small text-left text-muted mt-2">No spam. Pinky swear!</p>
-                        </div>
-                    </form>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img class="d-none d-md-inline-block" src="{{ ASSETS_ROOT }}/img/illustrations/mundo-digital.svg" alt="Mobile App Mockup">
                 </div>
             </div>
         </div>
     </section>
-    <div class="section section-md">
-        <div class="container">
-            <ul class="nav justify-content-center mb-4">
-                <li class="nav-item">
-                    <a class="nav-link text-twitter h3 px-4" aria-label="Twitter Social Link" href="https://twitter.com/ASPPIBRA_ORG"><span class="fab fa-twitter"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-linkedin h3 px-4" aria-label="LinkedIn Social Link" href="https://www.linkedin.com/company/asppibra-dao/"><span class="fab fa-linkedin"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-instagram h3 px-4" aria-label="Instagram Social Link" href="https://www.instagram.com/asppibra/"><span class="fab fa-instagram"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-telegram h3 px-4" aria-label="Telegram Social Link" href="https://t.me/Mundo_Digital_EUA"><span class="fab fa-telegram"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-github h3 px-4" aria-label="GitHub Social Link" href="https://github.com/ASPPIBRA-DAO"><span class="fab fa-github"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dribbble h3 px-4" aria-label="Dribbble Social Link" href="https://www.crunchbase.com/organization/sandro"><span class="fab fa-dribbble"></span></a>
-                </li>
-            </ul>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-8 text-center">
-                    <h1 class="display-2 mb-3">Plant your seed today! 🌱</h1>
-                    <p class="h3 fw-normal lh-160">Participate in the biggest digital inclusion project in Brazil and become a valuable partner in this transformative journey. 
-                        Don't miss the chance to be part of this historic moment. Reserve your seeds today and join us as we shape the future of Brazil's digital landscape.</p>
-                    <div class="mt-5">
-                        <a href="https://pancakeswap.finance/info/pairs/0xb9a2b08be15dc15e531b0d25b3942268da27b100" 
-                        class="btn btn-secondary animate-up-1">
-                            Buy Now
-                        </a>                        
+    <section class="section section-lg py-sm-0">
+        <div class="container z-2 mt-sm-n6 mt-md-n7">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card bg-white border-gray-300 text-gray p-4">
+                        <div class="card-header bg-white border-0 pb-0">
+                            <h2 class="h4 m-0">Share Moments that Matter</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Send photos and videos instantly. You can even capture the moments that matter to you most with a built-in camera.                           
+                            </p>
+                            <a href="#" class="btn btn-sm btn-secondary-app animate-up-2 mt-3">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card bg-white border-gray-300 text-gray p-4">
+                        <div class="card-header bg-white border-0 pb-0">
+                            <h2 class="h4 m-0">Speak Freely to your Friends</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                With voice calls, you can talk to your friends and family for free*, even if they're in another country or another continent.                          
+                            </p>
+                            <a href="#" class="btn btn-sm btn-secondary-app animate-up-2 mt-3">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-white border-gray-300 text-gray p-4">
+                        <div class="card-header bg-white border-0 pb-0">
+                            <h2 class="h4 m-0">Speak Freely to your Friends</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                With voice calls, you can talk to your friends and family for free*, even if they're in another country or another continent.                          
+                            </p>
+                            <a href="#" class="btn btn-sm btn-secondary-app animate-up-2 mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-lg-6">    
+                    <div class="d-flex flex-wrap justify-content-lg-start">
+                        <h2 class="h3 text-center text-lg-left mb-5">Features of your mobile application</h2>
+                        <div class="my-4">
+                            <div class="d-flex">
+                                <div class="me-3 me-md-4">
+                                    <div class="icon icon-md icon-secondary-app">
+                                        <span class="fas fa-shield-alt"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4">Security by default</h3>
+                                    <p>
+                                        When end-to-end encrypted, your messages and calls are secured so only you and the person you're communicating with can read or listen to them, and nobody in between, not even Impact.                                            
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <div class="d-flex">
+                                <div class="me-3 me-md-4">
+                                    <div class="icon icon-md icon-secondary-app">
+                                        <span class="fas fa-user-circle"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4">Groups to keep in touch</h3>
+                                    <p>
+                                        Keep in touch with the groups of people that matter the most, like your family or coworkers. With group chats, you can share messages, photos, and videos with up to 256 people at once.                                       
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <div class="d-flex">
+                                <div class="me-3 me-md-4">
+                                    <div class="icon icon-md icon-secondary-app">
+                                        <span class="fas fa-file-alt"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4">Document Sharing Made Easy</h3>
+                                    <p>
+                                        Send PDFs, documents, spreadsheets, slideshows and more, without the hassle of email or file sharing apps. You can send documents up to 100 MB, so it's easy to get what you need over to who you want.                                       
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-12 col-lg-5">
+                    <img class="d-none d-lg-inline-block" src="{{ ASSETS_ROOT }}/img/illustrations/app-landing-2.svg" alt="Mobile App Illustration">
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="section section-sm py-0">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="h6 fw-normal text-brown">We're proudly featured by</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col d-flex justify-content-center flex-wrap">
+                    <a href="#" aria-label="Stripe brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Stripe">
+                        <span class="fab fa-stripe"></span>
+                    </a>
+                    <a href="#" aria-label="Digg brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Digg">
+                        <span class="fab fa-digg"></span>
+                    </a>
+                    <a href="#" aria-label="FedEx brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="FedEx">
+                        <span class="fab fa-fedex"></span>
+                    </a>
+                    <a href="#" aria-label="Ember brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Ember">
+                        <span class="fab fa-ember"></span>
+                    </a>
+                    <a href="#" aria-label="Beyond brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Beyond">
+                        <span class="fab fa-d-and-d-beyond"></span>
+                    </a>
+                    <a href="#" aria-label="AngryCreative brand logo" class="icon icon-xl"
+                    data-bs-toggle="tooltip" data-placement="top" title="AngryCreative">
+                        <span class="fab fa-angrycreative"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 text-center mb-5 mb-lg-6">
+                    <h2 class="display-3 mb-4">Customers love it</h2>
+                    <p class="lead">The final result of our formula at work. Check out what our clients <br class="d-none d-lg-inline-block"> have to say about our mobile app and our support team.</p>
+                </div>
+            </div>
+            <div class="row mt-lg-6 mb-4 mb-lg-6">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/airbnb.svg" alt="Airbnb brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Pixel has replaced the whiteboard for us! Being able to jump in the same file with someone fills the gap of not being able to gather in person.</p>
+                            <a href="#" class="btn btn-link text-black">
+                                <span class="me-2"><span class="fas fa-book-open"></span></span> 
+                                <span class="fw-bold">Read story</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-gray-300 mt-lg-n6">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/corsair.svg" alt="Corsair brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Pixel has replaced the whiteboard for us! Being able to jump in the same file with someone fills the gap of not being able to gather in person.</p>
+                            <a href="#" class="btn btn-link text-black">
+                                <span class="me-2"><span class="fas fa-book-open"></span></span> 
+                                <span class="fw-bold">Read story</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/paypal.svg" alt="Paypal brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Pixel has replaced the whiteboard for us! Being able to jump in the same file with someone fills the gap of not being able to gather in person.</p>
+                            <a href="#" class="btn btn-link text-black">
+                                <span class="me-2"><span class="fas fa-book-open"></span></span> 
+                                <span class="fw-bold">Read story</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 mt-lg-4">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/ebay.svg" alt="Google brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Pixel has replaced the whiteboard for us! Being able to jump in the same file with someone fills the gap of not being able to gather in person.</p>
+                            <a href="#" class="btn btn-link text-black">
+                                <span class="me-2"><span class="fas fa-book-open"></span></span> 
+                                <span class="fw-bold">Read story</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 mt-lg-n5">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/northwestern.svg" alt="northwestern brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Pixel has replaced the whiteboard for us! Being able to jump in the same file with someone fills the gap of not being able to gather in person.</p>
+                            <a href="#" class="btn btn-link text-black">
+                                <span class="me-2"><span class="fas fa-book-open"></span></span> 
+                                <span class="fw-bold">Read story</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-lg-4">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/elastic.svg" alt="Elastic brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Pixel has replaced the whiteboard for us! Being able to jump in the same file with someone fills the gap of not being able to gather in person.</p>
+                            <a href="#" class="btn btn-link text-black">
+                                <span class="me-2"><span class="fas fa-book-open"></span></span> 
+                                <span class="fw-bold">Read story</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-3 mb-4">Facts & Questions</h2>
+                    <p class="lead">Have a question? Read through our FAQ below. If you can't find an answer, <br class="d-none d-lg-inline-block"> please email our support team. We're here to help.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <!--Accordion-->
+                    <div class="accordion" id="accordionExample1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is the purpose of a FAQ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is a FAQ document?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What are the top 10 interview questions?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Accordion-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section bg-primary-app">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-lg-6">
+                    <span class="h5 text-muted mb-2 d-block">The Power of the Web3</span>
+                    <h2 class="display-3 mb-4">Start utilizing our app within seconds</h2>
+                    <p class="lead text-muted">Establishing fast connections with servers around the world use our Web3 tools and services with maximum security, 
+                        privacy and compatibility with the main Blockchains. Monitor, measure and improve service performance while effortlessly expanding your 
+                        product's reach worldwide with a single click. 
+                    </p>
+                    <div class="d-sm-flex flex-wrap mt-4 mt-lg-5">
+                        <div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 ms-lg-auto">
+                    <img class="d-none d-lg-inline-block" src="{{ ASSETS_ROOT }}/img/illustrations/btc-serve.svg" alt="Servidor Illustration">
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
