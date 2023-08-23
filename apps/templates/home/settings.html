@@ -129,7 +129,9 @@
                                     <div class="col-lg-1 mb-2 mb-lg-0">
                                         <!-- Avatar -->
                                         <div class="avatar-lg">
-                                            <img class="rounded-circle" id="avatar-img" src="{% if user.image%}{{user.image}}{% else %}{{ ASSETS_ROOT }}/img/team/profile-picture-3.jpg{% endif %}" alt="change avatar">
+                                            <img class="rounded-circle" id="avatar-img" src="{% if request.user.image %}{{ request.user.image }}{% else %}{{ ASSETS_ROOT }}/img/team/profile-picture-3.jpg{% endif %}" alt="change avatar">
+
+
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mb-3 mb-lg-0">
@@ -163,6 +165,7 @@
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
     <script>
+
         document.getElementById('changeInfoForm').onsubmit = (e) => {
 
             e.preventDefault()
@@ -198,7 +201,7 @@
         // avatar
         document.getElementById('avatar-input').onchange = (e) => {
             document.getElementById('avatar-img').setAttribute('src', URL.createObjectURL(e.target.files[0]))
-        }
+        }   
 
         document.getElementById('changeAvatarForm').onsubmit = (e) => {
 
@@ -228,5 +231,14 @@
                     alert.classList.add('text-danger');
                 })
         }
+
+
     </script>
+    <script defer>
+        const elem = document.querySelector('#birthday');
+        const datepicker = new Datepicker(elem, {
+            'format': 'dd/mm/yyyy',
+        });
+    </script>
+                
 {% endblock javascripts %}

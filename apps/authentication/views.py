@@ -101,7 +101,7 @@ def change_password(request, **kwargs):
     }, status=status)
 
 class RecoveryView(SuccessMessageMixin, FormView):
-    template_name = 'accounts/forgot-password.html'
+    template_name = 'accounts/forgot_password.html'
     form_class = RecoveryForm
     success_url = reverse_lazy('recovery-password')
     success_message = 'Solicitação realizada com sucesso!'
@@ -132,6 +132,6 @@ class RecoveryView(SuccessMessageMixin, FormView):
 class PasswordResetView(
     SuccessMessageMixin, auth_views.PasswordResetConfirmView
 ):
-    template_name = 'accounts/reset-password.html'
+    template_name = 'accounts/reset_password.html'
     success_url = reverse_lazy('login')
     success_message = ('Password reset complete')

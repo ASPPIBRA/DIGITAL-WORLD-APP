@@ -3,7 +3,11 @@
 {% block title %} Blog {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css">
+{% endblock stylesheets %}
+
 
 {% block nav_style %} navbar-dark navbar-theme-secondary {% endblock nav_style %}
 
@@ -29,178 +33,93 @@
     <section class="section section-lg line-bottom-light">
         <div class="container mt-n10 mt-lg-n12 z-2">
             <div class="row">
+                {% for main_post in main_posts %}
                 <div class="col-lg-12 mb-5">
                     <div class="card shadow bg-white border-gray-300 flex-lg-row align-items-center g-0 p-4">
-                        <a href="/blog_post.html" class="col-12 col-lg-6"><img src="{{ ASSETS_ROOT }}/img/blog/Café/café06.png" alt="themesberg office" class="card-img-top rounded"></a>
+                        <a href="{% url 'blog_post_detail' main_post.id %}" class="col-12 col-lg-6"><img src="{{ main_post.image.url }}" alt="themesberg office" class="card-img-top rounded"></a>
                         <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-0 p-lg-3 p-xl-5">
-                            <a href="/blog_post.html">
-                                <h2>Complete coffee history.</h2>
+                            <a href="{% url 'blog_post_detail' main_post.id %}">
+                                <h2>{{main_post.title}}</h2>
                             </a>
                             <p>
-                                Step into the captivating journey through the complete history of coffee, 
-                                tracing its origins from Ethiopian legends to global prominence as a beloved brew. 
-                                Uncover the aromatic evolution and cultural impact of this cherished beverage. ☕ 🌎
+                                {{ main_post.summary }}
                             </p>
                             <div class="d-flex align-items-center mt-3">
                                 <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Richard avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
+                                <h3 class="h6 small ms-2 mb-0"> {{ main_post.author }}</h3>
                                 <span class="h6 text-muted small fw-normal mb-0 ms-auto">
-                                    <time datetime="2023-08-16">16 August, 2023</time>
+                                    <time datetime="2023-08-16">{{main_post.date_post}}</time>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
-                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
-                        <a href="/blog_post.html">
-                            <img src="{{ ASSETS_ROOT }}/img/blog/cacau.png" class="card-img-top rounded" alt="our desk">
-                        </a>
-                        <div class="card-body p-0 pt-4">
-                            <a href="/blog_post.html" class="h4">Complete History of Cocoa.</a>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Neil avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
+                {% endfor %}
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="glide-testimonials">
+                                <div data-glide-el="track" class="glide__track">
+                                    <ul class="glide__slides">
+                                        <li class="glide__slide">
+                                            <div class="row">
+                                            {% for post in posts %}
+                                                <div class="col-12 col-md-4 mb-4 mb-lg-5">
+                                                    <div class="card shadow bg-white border-gray-300 p-4 rounded">
+                                                        <a href="{% url 'blog_post_detail' post.id %}">
+                                                            <img src="{{ post.image.url }}" class="card-img-top rounded" alt="our desk">
+                                                        </a>
+                                                        <div class="card-body p-0 pt-4">
+                                                            <a href="{% url 'blog_post_detail' post.id %}" class="h4"> {{post.title}} </a>
+                                                            <div class="d-flex align-items-center my-3">
+                                                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Neil avatar"> 
+                                                                <h3 class="h6 small ms-2 mb-0">  {{ post.author }} </h3>
+                                                            </div>
+                                                            <p class="mb-0">
+                                                                {{ post.summary }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                                                </div>
+                                            </li>
+                                            <li class="glide__slide">
+                                                <div class="row">
+                                                {% endif %}
+                                            {% endfor %}
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <p class="mb-0">
-                                Immerse yourself in the fascinating history of cocoa, 
-                                knowing its roots from ancient Mesoamerican civilizations to becoming the famous chocolate around the world. 
-                                Explore the sweet evolution and cultural significance of this fabulous treat. 🍫 🌎
-                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
-                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
-                        <a href="/blog_post.html">
-                            <img src="{{ ASSETS_ROOT }}/img/blog/bambu.png" class="card-img-top rounded" alt="web desk">
-                        </a>
-                        <div class="card-body p-0 pt-4">
-                            <a href="/blog_post.html" class="h4">Complete History of Bamboo.</a>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="David avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
-                            </div>
-                            <p class="mb-0">
-                                Immerse yourself in the history of bamboo, tracing its origins in Asia to its versatile global popularity. 
-                                Explore its journey from traditional uses to modern sustainability, highlighting its ecological potential. 🎋 🌎
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
-                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
-                        <a href="/blog_post.html">
-                            <img src="{{ ASSETS_ROOT }}/img/blog/açai.png" class="card-img-top rounded" alt="pixel room">
-                        </a>
-                        <div class="card-body p-0 pt-4">
-                            <a href="/blog_post.html" class="h4">Complete history of açaí.</a>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Jose avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
-                            </div>
-                            <p class="mb-0">
-                                Embark on a flavorful journey through the complete açai story, 
-                                from Amazonian traditions to superfood stardom. Discover its rise as a health trend, 
-                                rich cultural ties, and nutrient-packed allure. 🍇 🌴
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
-                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
-                        <a href="/blog_post.html">
-                            <img src="{{ ASSETS_ROOT }}/img/blog/bitcoin.png" class="card-img-top rounded" alt="designer office">
-                        </a>
-                        <div class="card-body p-0 pt-4">
-                            <a href="/blog_post.html" class="h4">Complete History of Bitcoin.</a>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="James avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
-                            </div>
-                            <p class="mb-0">
-                                Uncover the riveting history of Bitcoin, tracing its inception from a white paper to a global digital asset. 
-                                Explore its technological breakthrough, market ups and downs, and transformative potential in the financial world. 💰 🌐
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
-                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
-                        <a href="/blog_post.html">
-                            <img src="{{ ASSETS_ROOT }}/img/blog/ethereum.png" class="card-img-top rounded" alt="white laptop">
-                        </a>
-                        <div class="card-body p-0 pt-4">
-                            <a href="/blog_post.html" class="h4">Complete history of Ethereum.</a>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Bonnie avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
-                            </div>
-                            <p class="mb-0">
-                                Immerse in the dynamic narrative of Ethereum, from its proposal to becoming a leading blockchain platform. 
-                                Explore its smart contract innovation, decentralized apps, and impact on reshaping digital economy. 📈 🌐
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
-                    <div class="card shadow bg-white border-gray-300 p-4 rounded">
-                        <a href="/blog_post.html">
-                            <img src="{{ ASSETS_ROOT }}/img/blog/binance.png" class="card-img-top rounded" alt="photoshop books">
-                        </a>
-                        <div class="card-body p-0 pt-4">
-                            <a href="/blog_post.html" class="h4">Complete History of Binance Smart Chain.</a>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Joseph avatar"> 
-                                <h3 class="h6 small ms-2 mb-0">Ana Amorim</h3>
-                            </div>
-                            <p class="mb-0">
-                                Explore the complete tale of Binance Smart Chain, emerging as a powerhouse in blockchain. 
-                                From its rapid inception to fostering DeFi and NFTs, delve into its low fees, high-speed transactions, 
-                                and growing ecosystem. 💱 🌐
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="d-flex justify-content-center">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Previous</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+                
+             </div>
         </div>
     </section>
 
+    
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
 
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            new Glide('.glide__slide', {
+                autoplay: false,
+                pauseOnLoad: true
+            }).mount();
+        });
+
         // here you should load content from an Ajax request and when it
         // loads you can disable the button from loading
         $('#loadOnClick').click(function() {
