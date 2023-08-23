@@ -182,7 +182,6 @@ if os.getenv("FTP_UPLOAD", default=False):
         FTP_UPLOAD = False
         print('FTP credentials not set in the environment')
 '''
-
 GITHUB_CLIENT_ID = os.getenv('GITHUB_ID', None)
 GITHUB_SECRET = os.getenv('GITHUB_SECRET', None)
 GITHUB_AUTH = GITHUB_SECRET is not None and GITHUB_CLIENT_ID is not None
