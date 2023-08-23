@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.twitter',
     "sslserver",
-    'apps.accounts'
+    'apps.accounts',
+    'apps.blog'
 ]
 
 MIDDLEWARE = [
@@ -110,10 +111,10 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'db-postgresql',
+            'NAME': 'asppibra-db',
             'USER': 'postgres',
             'PASSWORD': '222545',
-            'HOST': 'localhost'
+            'HOST': '127.0.0.1'
         }
     }
 
@@ -195,7 +196,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 12
+SITE_ID = 13
 
 SERVER = env('SERVER', default='127.0.0.1')
 
@@ -225,6 +226,7 @@ if TWITTER_AUTH:
     }
 
 django_heroku.settings(locals())
+    
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
@@ -236,3 +238,5 @@ EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_PORT = env('EMAIL_PORT')
 
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
+CKEDITOR_UPLOAD_PATH = 'uploades/'
