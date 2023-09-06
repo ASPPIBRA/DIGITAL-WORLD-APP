@@ -33,24 +33,24 @@
     <section class="section section-lg line-bottom-light">
         <div class="container mt-n10 mt-lg-n12 z-2">
             <div class="row">
-                {% for main_post in main_posts %}
+                {% for item in main_posts_with_urls %}
                 <div class="col-lg-12 mb-5">
                     <div class="card shadow bg-white border-gray-300 flex-lg-row align-items-center g-0 p-4">
-                        {% if main_post.image %}
-                        <a href="{% url 'blog_post_detail' main_post.id %}" class="col-12 col-lg-6"><img src="{{ main_post.image.url }}" alt="themesberg office" class="card-img-top rounded"></a>
-                        {% endif %}
+                        <a href="{% url 'blog_post_detail' item.post.id %}" class="col-12 col-lg-6">
+                            <img src="{{ item.full_url }}" alt="{{ item.post.title }}">
+                        </a>
                         <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-0 p-lg-3 p-xl-5">
-                            <a href="{% url 'blog_post_detail' main_post.id %}">
-                                <h2>{{main_post.title}}</h2>
+                            <a href="{% url 'blog_post_detail' item.post.id %}">
+                                <h2>{{ item.post.title }}</h2>
                             </a>
                             <p>
-                                {{ main_post.summary }}
+                                {{ item.post.summary }}
                             </p>
                             <div class="d-flex align-items-center mt-3">
                                 <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Richard avatar"> 
-                                <h3 class="h6 small ms-2 mb-0"> {{ main_post.author }}</h3>
+                                <h3 class="h6 small ms-2 mb-0"> {{ item.post.author }}</h3>
                                 <span class="h6 text-muted small fw-normal mb-0 ms-auto">
-                                    <time datetime="2023-08-16">{{main_post.date_post}}</time>
+                                    <time datetime="2023-08-16">{{ item.post.date_post }}</time>
                                 </span>
                             </div>
                         </div>
@@ -66,33 +66,31 @@
                                     <ul class="glide__slides">
                                         <li class="glide__slide">
                                             <div class="row">
-                                            {% for post in posts %}
+                                                {% for item in posts_with_urls %}
                                                 <div class="col-12 col-md-4 mb-4 mb-lg-5">
                                                     <div class="card shadow bg-white border-gray-300 p-4 rounded">
-                                                        <a href="{% url 'blog_post_detail' post.id %}">
-                                                            <img src="{{ post.image.url }}" class="card-img-top rounded" alt="our desk">
+                                                        <a href="{% url 'blog_post_detail' item.post.id %}">
+                                                            <img src="{{ item.full_url }}" class="card-img-top rounded" alt="our desk">
                                                         </a>
                                                         <div class="card-body p-0 pt-4">
-                                                            <a href="{% url 'blog_post_detail' post.id %}" class="h4"> {{post.title}} </a>
+                                                            <a href="{% url 'blog_post_detail' item.post.id %}" class="h4"> {{ item.post.title }} </a>
                                                             <div class="d-flex align-items-center my-3">
-                                                                {% if post.image %}
                                                                 <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/team/carol-br-1.png" alt="Neil avatar"> 
-                                                                {% endif %}
-                                                                <h3 class="h6 small ms-2 mb-0">  {{ post.author }} </h3>
+                                                                <h3 class="h6 small ms-2 mb-0"> {{ item.post.author }} </h3>
                                                             </div>
                                                             <p class="mb-0">
-                                                                {{ post.summary }}
+                                                                {{ item.post.summary }}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 {% if forloop.counter|divisibleby:3 and not forloop.last %}
                                                 </div>
-                                            </li>
-                                            <li class="glide__slide">
+                                                </li>
+                                                <li class="glide__slide">
                                                 <div class="row">
                                                 {% endif %}
-                                            {% endfor %}
+                                                {% endfor %}
                                             </div>
                                         </li>
                                     </ul>
