@@ -1,25 +1,38 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Blank {% endblock %} 
+{% block title %} Blockchain {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
-{% block nav_style %} navbar-light navbar-theme-secondary {% endblock nav_style %}
+{% block nav_style %} navbar-dark navbar-theme-secondary {% endblock nav_style %}
 
 {% block content %}
 
     <!-- Hero -->
-    <section class="section-header">
+    <section class="section section-header pb-11 bg-primary text-white">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 text-center">
-                    <h1 class="display-2 mb-3">Blank starter page</h1>
-                    <p>Hello world!</p>
+                <div class="col-12 col-xl-8 text-center">
+                    <h1 class="display-2 mb-3">Page under construction</h1>
+                    <p class="lead">Launch soon</p>        
                 </div>
             </div>
         </div>
     </section>
+    <!-- Section -->    
+    <div class="section py-0">
+        <div class="container mt-n10">
+            <div class="row">
+                <div class="col-12">
+                    <img class="page-image" src="{{ ASSETS_ROOT }}/img/pages/blockchain/blockchain.svg" alt="Your Image Description">
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- Section -->    
+    
+    <!-- End of section -->
 
 {% endblock content %}
 
