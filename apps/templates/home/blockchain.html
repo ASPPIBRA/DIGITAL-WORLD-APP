@@ -5,34 +5,440 @@
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
-{% block nav_style %} navbar-dark navbar-theme-secondary {% endblock nav_style %}
+{% block nav_style %} navbar-light navbar-theme-secondary {% endblock nav_style %}
 
 {% block content %}
 
     <!-- Hero -->
-    <section class="section section-header pb-11 bg-primary text-white">
+    <section class="section section-header bg-primary-app text-dark pb-md-10">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-xl-8 text-center">
-                    <h1 class="display-2 mb-3">Page under construction</h1>
-                    <p class="lead">Launch soon</p>        
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="display-2 mb-4">Registration on the <span class="text-secondary-app fw-bold">Blockchain</span>
+                    </h1>
+                    <p class="lead text-gray mb-1">Registration on the blockchain refers to the process of recording and verifying data or transactions on a blockchain network. 
+                        Blockchain is a distributed and decentralized digital ledger technology that offers transparency, security, and immutability of data. 
+                        Here's how registration on the blockchain typically works:
+                        
+                    </p>                                       
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img class="d-none d-md-inline-block" src="{{ ASSETS_ROOT }}/img/pages/blockchain/imagens/lp.svg" alt="Mobile App Mockup">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Section -->    
-    <div class="section py-0">
-        <div class="container mt-n10">
-            <div class="row">
-                <div class="col-12">
-                    <img class="page-image" src="{{ ASSETS_ROOT }}/img/pages/blockchain/blockchain.svg" alt="Your Image Description">
+    <div class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-lg-6">    
+                    <div class="d-flex flex-wrap justify-content-lg-start">
+                        <h2 class="h3 text-center text-lg-left mb-5">App Features</h2>
+                        <div class="my-4">
+                            <div class="d-flex">
+                                <div class="me-3 me-md-4">
+                                    <div class="icon icon-md icon-secondary-app">
+                                        <span class="fas fa-shield-alt"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4">Security by default</h3>
+                                    <p>
+                                        When end-to-end encrypted, your messages and calls are secured so only you and the person you're communicating with can read or listen to them, and nobody in between, not even Impact.                                            
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <div class="d-flex">
+                                <div class="me-3 me-md-4">
+                                    <div class="icon icon-md icon-secondary-app">
+                                        <span class="fas fa-user-circle"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4">Groups to keep in touch</h3>
+                                    <p>
+                                        Keep in touch with the groups of people that matter the most, like your family or coworkers. With group chats, you can share messages, photos, and videos with up to 256 people at once.                                       
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <div class="d-flex">
+                                <div class="me-3 me-md-4">
+                                    <div class="icon icon-md icon-secondary-app">
+                                        <span class="fas fa-file-alt"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4">Document Sharing Made Easy</h3>
+                                    <p>
+                                        Send PDFs, documents, spreadsheets, slideshows and more, without the hassle of email or file sharing apps. You can send documents up to 100 MB, so it's easy to get what you need over to who you want.                                       
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-12 col-lg-5">
+                    <img class="d-none d-lg-inline-block" src="{{ ASSETS_ROOT }}/img/illustrations/computer.svg" alt="Mobile App Illustration">
                 </div>
             </div>
         </div>
-    </div>    
-    <!-- Section -->    
-    
-    <!-- End of section -->
+    </div>
+    <div class="section section-sm py-0">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="h6 fw-normal text-brown">Be our partner and highlight your company here 👇🏼</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col d-flex justify-content-center flex-wrap">
+                    <a href="#" aria-label="Stripe brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Stripe">
+                        <span class="fab fa-stripe"></span>
+                    </a>
+                    <a href="#" aria-label="Digg brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Digg">
+                        <span class="fab fa-digg"></span>
+                    </a>
+                    <a href="#" aria-label="FedEx brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="FedEx">
+                        <span class="fab fa-fedex"></span>
+                    </a>
+                    <a href="#" aria-label="Ember brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Ember">
+                        <span class="fab fa-ember"></span>
+                    </a>
+                    <a href="#" aria-label="Beyond brand logo" class="icon icon-xl me-4 me-lg-5"
+                    data-bs-toggle="tooltip" data-placement="top" title="Beyond">
+                        <span class="fab fa-d-and-d-beyond"></span>
+                    </a>
+                    <a href="#" aria-label="AngryCreative brand logo" class="icon icon-xl"
+                    data-bs-toggle="tooltip" data-placement="top" title="AngryCreative">
+                        <span class="fab fa-angrycreative"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 text-center mb-5 mb-lg-6">
+                    <h2 class="display-3 mb-4">The main protocols</h2>
+                    <p class="lead">Major cryptocurrencies and their respective blockchains feature a 
+                        diverse array of infrastructure protocols designed to pave the way for the next generation of decentralized applications.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-lg-6 mb-4 mb-lg-6">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/Ethereum.svg" alt="Ethereum brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Ethereum is a decentralized blockchain platform that goes beyond being just a cryptocurrency like Bitcoin. 
+                                It was proposed in late 2013 by Vitalik Buterin and development began in early 2014, with the network going live on July 30, 2015. 
+                                Ethereum introduces a new level of programmability to blockchain technology, allowing developers to build and deploy smart contracts 
+                                and decentralized applications (DApps) on its platform.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-gray-300 mt-lg-n6">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/Bitcoin.svg" alt="Bitcoin brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>                                
+                            </span>
+                            <p class="px-2 my-4">Bitcoin is a decentralized digital currency, often referred to as a cryptocurrency. 
+                                It was created in 2009 by an individual or group using the pseudonym Satoshi Nakamoto. 
+                                Unlike traditional currencies issued by governments (fiat currencies), Bitcoin is not controlled by any 
+                                central authority like a central bank or government.
+
+                            </p>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/Binance.svg" alt="Binance brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Binance Smart Chain (BSC) is a blockchain platform that operates in parallel with the Binance Chain. 
+                                It was created by Binance, one of the world's largest cryptocurrency exchanges, and was launched in September 2020. 
+                                BSC aims to provide a fast and low-cost alternative to the Ethereum network for decentralized applications (DApps) and smart contracts.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 mt-lg-4">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/Polygon.svg" alt="Polygon brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Polygon (formerly known as Matic Network) is a scaling and infrastructure platform for Ethereum. 
+                                It aims to address some of the scalability and usability challenges faced by the Ethereum network by providing 
+                                a layer 2 solution that enhances its capabilities.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 mt-lg-n5">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/Polkadot.svg" alt="Polkadot brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Polkadot is a multi-chain blockchain platform that enables different blockchains to interoperate and share information. 
+                                It was created by Dr. Gavin Wood, one of the co-founders of Ethereum, and was developed by the Web3 Foundation. 
+                                Polkadot aims to address some of the limitations and challenges faced by existing blockchain networks by introducing a highly scalable and interoperable framework.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-lg-4">
+                    <div class="card border-gray-300">
+                        <div class="card-body text-center py-5">
+                            <img class="image-sm img-fluid mx-auto mb-3" src="{{ ASSETS_ROOT }}/img/clients/Solana.svg" alt="Solana brand">
+                            <span class="d-block">
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star fas fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                                <span class="star far fa-star text-warning"></span>
+                            </span>
+                            <p class="px-2 my-4">Solana is a high-performance blockchain platform designed for decentralized applications (DApps) and crypto-currencies. 
+                                It aims to address the scalability and speed limitations that some other blockchain networks face, making it well-suited for applications 
+                                requiring fast and cost-effective transactions.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-3 mb-4">Facts & Questions</h2>
+                    <p class="lead">Read through our FAQ below. If you can't find an answer, <br class="d-none d-lg-inline-block"> please email our support team. We're here to help.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <!--Accordion-->
+                    <div class="accordion" id="accordionExample1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is the digital world?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    <p>
+                                    
+                                        <strong>INTRODUCTION</strong>
+                                    </p>    
+                                    <p>
+                                        
+                                        Welcome to the exciting <code>Digital World</code>, a pioneering initiative poised to revolutionize and empower individuals around the world. 
+                                        Our main mission is to promote the mass digital inclusion of the Brazilian and world population, guaranteeing universal access 
+                                        to financial security and defending environmental preservation through sustainable practices.
+                                    
+                                    </p>
+                                    <p>
+
+                                        By harnessing the immense potential of innovative technologies such as blockchain and web 3, we are at the forefront of creating 
+                                        a path to a future characterized by the sustainable exploitation of water and mineral resources, as well as the flourishing of clean energy generation. 
+                                        In addition, the Digital World Project takes a proactive approach to addressing the challenge of land tenure regularization, 
+                                        effectively reducing the gap between urban and rural areas. By offering attractive financial incentives, we actively encourage 
+                                        the adoption of sustainable agricultural practices and the restoration of degraded areas, breathing new life into the environment.
+                                    
+                                    </p>
+                                    <p>
+
+                                        In this digital world, limits disappear and opportunities become limitless. The Digital World Project envisions a vibrant ecosystem 
+                                        where people from all walks of life can connect, interact and grow their businesses. By fostering new partnerships without the constraints 
+                                        of borders, we empower individuals to reach their full potential and drive global prosperity.
+                                    
+                                    </p>
+                                    <p>
+
+                                        Join us on this incredible journey as we move towards a future where technology and sustainability go hand in hand. Together, let's create a 
+                                        digital environment that uplifts individuals, advances business and transcends borders. Welcome to the Digital World Project, where endless possibilities await!
+                                    
+                                    </p>                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is ASPPIBRA-DAO?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    <p>
+                                        
+                                        <strong>INTRODUCTION</strong>
+                                    
+                                    </p>
+                                    <p>
+                                        
+                                        We are <code>ASPPIBRA - Association of Property Owners and Possessors in Brazil</code>. We are a non-profit civil association, 
+                                        founded on 09/04/2016, in the State of Rio de Janeiro-RJ, formed by professionals, liberals and citizens who wish 
+                                        to contribute to the socioeconomic development of modern society. We aim to defend and represent the interests of 
+                                        property owners and property owners in Brazil.
+                                        
+                                    </p>
+                                    <p> 
+                                        
+                                        ASPPIBRA was founded with the aim of accelerating digital inclusion, 
+                                        facilitating Brazilian citizens' access to resources and services through new technologies and making land regularization 
+                                        in Brazil a reality for everyone, even those who do not have access to information. Knowing well the difficulties 
+                                        faced throughout the national territory, we seek to provide quality support to all citizens with regard to Private 
+                                        Property, real estate registration, licensing, access to information and exploitation of natural resources in a sustainable way.
+                                    
+                                    </p>                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What technologies will be used ?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    <p>
+                                        <strong>IPFS stands for "InterPlanetary File System"</strong>, and it's a protocol and network designed to create a more efficient and decentralized 
+                                        way of storing and sharing data on the internet. Unlike the traditional web, where data is stored on centralized servers, IPFS is based on a distributed 
+                                        and peer-to-peer model.
+                                    
+                                    </p>
+
+                                        <code>Key concepts and features of IPFS include:</code>
+                                    <p>    
+                                        
+                                        <strong><li>Content Addressing:</li></strong><p> 
+                                        
+                                        In IPFS, files are identified and retrieved based on their content, rather than their location. Each piece of content is 
+                                        assigned a unique cryptographic hash, which serves as its address. This allows for efficient and reliable content retrieval, as identical content will always have the same address.
+                                    
+                                    </p>
+                                    <p>
+
+                                        <strong><li>Decentralization:</li></strong><p> 
+                                        
+                                        IPFS is built on a network of interconnected nodes (computers) that store and serve content. When you request a file, 
+                                        your computer can retrieve it from the nearest or most available node rather than a single central server. This decentralized approach enhances redundancy and availability.
+                                    
+                                    </p>
+                                    <p>
+
+                                        <strong><li>Caching:</li></strong><p> 
+                                        
+                                        IPFS employs a caching mechanism, which means that popular content is stored on multiple nodes, reducing the need to retrieve it from the original source each time it's requested. 
+                                        This can lead to faster content delivery and decreased load on the original source.
+                                    
+                                    </p>
+                                    <p>
+
+                                        <strong><li>Offline Access:</li></strong><p> 
+                                        
+                                        IPFS enables offline access to content. If you have a file with its content already stored locally or if it's cached on nearby nodes, you can access 
+                                        the content even if you're disconnected from the internet.
+                                    
+                                    </p>
+                                    <p>
+
+                                        <strong><li>Data Integrity:</li></strong><p> 
+                                        
+                                        The content addressing and cryptographic hashes used by IPFS ensure data integrity. If a file's content is altered, its hash will change, 
+                                        and it will be treated as a completely different piece of content.
+                                    
+                                    </p>
+                                    <p>
+
+                                        <strong><li>Peer-to-Peer Communication:</li></strong><p> 
+                                        
+                                        IPFS nodes communicate with each other using peer-to-peer protocols. This allows for efficient sharing of data without relying on centralized servers.
+                                    
+                                    </p>
+                                    <p>
+
+                                        <strong><li>Use Cases:</li></strong><p> 
+                                        
+                                        IPFS has various use cases, including hosting websites, distributing large files, creating decentralized applications (DApps), preserving historical data, and more.
+                                    
+                                    </p>
+                                    <p>
+
+                                        IPFS is often seen as a foundational technology that aligns with the principles of decentralization, data ownership, and web3. While it has significant potential, it's important to note that it's still being developed, and widespread adoption and integration with existing web technologies are ongoing challenges.
+
+                                    </p>                                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Accordion-->
+                </div>
+            </div>
+        </div>
+    </section>       
+    <div class="section bg-primary-app">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-lg-6">
+                    <span class="h5 text-muted mb-2 d-block">The Power of the Web3</span>
+                    <h2 class="display-3 mb-4">Start utilizing our app within seconds</h2>
+                    <p class="lead text-muted">Establishing fast connections with servers around the world use our Web3 tools and services with maximum security, 
+                        privacy and compatibility with the main Blockchains. Monitor, measure and improve service performance while effortlessly expanding your 
+                        product's reach worldwide with a single click. 
+                    </p>
+                    <div class="d-sm-flex flex-wrap mt-4 mt-lg-5">
+                        <div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 ms-lg-auto">
+                    <img class="d-none d-lg-inline-block" src="{{ ASSETS_ROOT }}/img/illustrations/btc-serve.svg" alt="Servidor Illustration">
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock content %}
 
