@@ -5,33 +5,204 @@
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
-{% block nav_style %} navbar-dark navbar-theme-secondary {% endblock nav_style %}
+{% block nav_style %} navbar-light navbar-theme-secondary {% endblock nav_style %}
 
 {% block content %}
 
     <!-- Hero -->
-    <section class="section section-header pb-11 bg-primary text-white">
+    <section class="section section-header bg-primary-app text-dark pb-md-10">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-xl-8 text-center">
-                    <h1 class="display-2 mb-3">Page under construction</h1>
-                    <p class="lead">Launch soon</p>        
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="display-2 mb-4">Mining Commodities <span class="text-secondary-app fw-bold">Hub.</span>
+                    </h1>
+                    <p class="lead text-gray mb-1">Welcome to the Mining Commodities Hub, your comprehensive resource for everything related to the dynamic 
+                        world of mining and mineral commodities. Whether you're a seasoned industry professional, an investor looking to diversify your portfolio, 
+                        or someone simply curious about the vital role these resources play in our daily lives, our website is your go-to destination.
+                    </p>                                        
+                    <div class="d-flex flex-wrap mt-4 mt-lg-5"></div>
+                    <a class="btn btn-tertiary" href="#">Find Our Works <span class="fas fa-angle-right ms-2"></span></a>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img class="organic-radius img-fluid" src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/caminhão.png" alt="Mobile App Mockup">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Section -->    
-    <div class="section py-0">
-        <div class="container mt-n10">
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 text-center mb-5 mb-lg-6">
+                    <h2 class="display-3 mb-4">Market Insights:</h2>
+                    <p class="lead">Stay ahead of the curve with real-time updates on market trends, prices, and forecasts for a wide range of minerals and commodities. 
+                        Our expert analysis and data-driven reports will help you make informed decisions.
+
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </section>    
+    <section class="section section-lg line-bottom-light">
+        <div class="container mt-n10 mt-lg-n12 z-2">
             <div class="row">
-                <div class="col-12">
-                    <img class="page-image" src="{{ ASSETS_ROOT }}/img/pages/exploration/minerar.svg" alt="Your Image Description">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/cobalto.png" class="card-img-top rounded" alt="designer office">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">cobalt ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/uranium.png" class="card-img-top rounded" alt="white laptop">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">uranium ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300 p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/terras.png" class="card-img-top rounded" alt="photoshop books">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">rare earth ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/ouro.png" class="card-img-top rounded" alt="our desk">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">gold ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/paladio.png" class="card-img-top rounded" alt="web desk">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">palladium ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/prata.png" class="card-img-top rounded" alt="pixel room">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">silver ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/ferro.png" class="card-img-top rounded" alt="designer office">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">iron ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/cobre.png" class="card-img-top rounded" alt="white laptop">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">copper ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300 p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/zinco.png" class="card-img-top rounded" alt="photoshop books">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">zinc ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">.</h3>
+                            </div>
+                            <p class="mb-0">.</p>
+                        </div>
+                    </div>
+                </div>                                           
+            </div>
+        </div>
+    </section>   
+    <div class="section bg-primary-app">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-lg-6">
+                    <span class="h5 text-muted mb-2 d-block">Digital world The Power of the Web3</span>
+                    <h2 class="display-3 mb-4">Why Choose Mining Commodities Hub?</h2>
+                    <p class="lead text-muted">Join us on this exciting journey as we unearth the riches, challenges, and innovations of the mining industry. 
+                        Together, we'll delve into the earth's depths and discover the valuable resources that power our lives and shape our future.
+                        Start your exploration today and become a part of the community. 
+                    </p>
+                    <div class="d-sm-flex flex-wrap mt-4 mt-lg-5">
+                        <a class="btn btn-tertiary" href="#">Find Our Works <span class="fas fa-angle-right ms-2"></span></a>                       
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 ms-lg-auto">
+                    <img class="d-none d-lg-inline-block" src="{{ ASSETS_ROOT }}/img/pages/exploration/imagens/minerador.png" alt="Servidor Illustration">
                 </div>
             </div>
         </div>
-    </div>    
-    <!-- Section -->                  
-    <!-- End of section -->
+    </div>
 
 {% endblock content %}
 
