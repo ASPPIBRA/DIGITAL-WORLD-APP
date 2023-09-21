@@ -1,38 +1,209 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Agribusiness {% endblock %} 
+{% block title %} Agribusiness {% endblock %}  
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
-{% block nav_style %} navbar-dark navbar-theme-secondary {% endblock nav_style %}
+{% block nav_style %} navbar-light navbar-theme-secondary {% endblock nav_style %}
 
 {% block content %}
 
     <!-- Hero -->
-    <section class="section section-header pb-11 bg-primary text-white">
+    <section class="section section-header bg-primary-app text-dark pb-md-10">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-xl-8 text-center">
-                    <h1 class="display-2 mb-3">Page under construction</h1>
-                    <p class="lead">Launch soon</p>        
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="display-2 mb-4">Hub <span class="text-secondary-app fw-bold">Commodities Agribusiness.</span>
+                    </h1>
+                    <p class="lead text-gray mb-1">Welcome to your gateway to the world of premium food products. 
+                        Our Agribusiness Food Product page is a treasure trove of exceptional culinary delights and agricultural innovations, 
+                        representing the pinnacle of quality, sustainability, and global agribusiness expertise.
+                    </p>                                        
+                    <div class="d-flex flex-wrap mt-4 mt-lg-5"></div>
+                    <a class="btn btn-tertiary" href="#">Find Our Works <span class="fas fa-angle-right ms-2"></span></a>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img class="organic-radius img-fluid" src="https://bafybeie27banxpvb647alclgwxsmrxlcrtoccs2vkla5cie2d4hi5ksasy.ipfs.w3s.link/trator.png" alt="Mobile App Mockup">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Section -->    
-    <div class="section py-0">
-        <div class="container mt-n10">
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 text-center mb-5 mb-lg-6">
+                    <h2 class="display-3 mb-4">Market Insights:</h2>
+                    <p class="lead">Stay up-to-date with the latest trends, market insights, and pricing information for these essential food items. 
+                        Whether you're a farmer, a consumer, or an industry professional, our website is your go-to resource for tracking fluctuations 
+                        in food commodity prices and understanding the factors influencing them.
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </section>    
+    <section class="section section-lg line-bottom-light">
+        <div class="container mt-n10 mt-lg-n12 z-2">
             <div class="row">
-                <div class="col-12">
-                    <img class="page-image" src="{{ ASSETS_ROOT }}/img/pages/agribusiness/agro.svg" alt="Your Image Description">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeiexi43gqu35x2ukvwbmn3zdevnzvqunasavmgbcsouwxqgpvev2je.ipfs.w3s.link/gado.png" class="card-img-top rounded" alt="designer office">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">cobalt ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>                            
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeidpgxjh6zr6k2jzomkn2huivxzfyardrju4lytxa3eqtv4ahgaghm.ipfs.w3s.link/galinha.png" class="card-img-top rounded" alt="white laptop">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">uranium ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300 p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeieilvexha5wjkqgut6lesdnzmmdjd4o44sncbyst7ts47h5grcky4.ipfs.w3s.link/porco.png" class="card-img-top rounded" alt="photoshop books">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">rare earth ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeif3rxsreg636afmmycahiuzxvcpifg5ccph7ovri7pl7supcdd44e.ipfs.w3s.link/mel.png" class="card-img-top rounded" alt="our desk">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">gold ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeihfielqlexo6pyx3ygtpfodwpmzpmyd3yb2egwvfkodjh5lomwdcy.ipfs.w3s.link/queijo.png" class="card-img-top rounded" alt="web desk">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">palladium ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeifk6zvrtztwh35kbk5p6pjs2qai572s2qlsseygpucvplcgxz7p5e.ipfs.w3s.link/Ovos.png" class="card-img-top rounded" alt="pixel room">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">silver ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeiejny2jiimnskssex3wzpsbypnciutb5do3kepaznpn3m7nrnk25i.ipfs.w3s.link/frutas.png" class="card-img-top rounded" alt="designer office">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">iron ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300  p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeievc6ltdapexw6lgsbgxcoikbrzrawv4jmnlta4ihpeqru3saebou.ipfs.w3s.link/sucos.png" class="card-img-top rounded" alt="white laptop">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">copper ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+                    <div class="card shadow bg-white border-gray-300 p-4 rounded">
+                        <a href="/blog_post.html">
+                            <img src="https://bafybeic4hcy7fdaijiofooa4nna3osb7bminy5jlwi7pr327whfozeb7o4.ipfs.w3s.link/temperos.png" class="card-img-top rounded" alt="photoshop books">
+                        </a>
+                        <div class="card-body p-0 pt-4">
+                            <a href="/blog_post.html" class="h4">zinc ore.</a>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="avatar avatar-sm rounded-circle" src="{{ ASSETS_ROOT }}/img/brand/logo-dark.svg" alt="James avatar"> 
+                                <h3 class="h6 small ms-2 mb-0">Author Name</h3>
+                            </div>
+                            <p class="mb-0">Card content goes here.</p>
+                        </div>
+                    </div>
+                </div>                                           
+            </div>
+        </div>
+    </section>
+    <div class="section bg-primary-app">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-lg-6">
+                    <span class="h5 text-muted mb-2 d-block">Digital world The Power of the Web3</span>
+                    <h2 class="display-3 mb-4">Why choose the food commodity center?</h2>
+                    <p class="lead text-muted">Engage with a community of individuals and experts passionate about food security, 
+                        agriculture, and the future of our food systems. Share your thoughts, questions, and experiences to contribute 
+                        to the ongoing dialogue about the world's most essential commodities.                                                 
+                    </p>
+                    <div class="d-sm-flex flex-wrap mt-4 mt-lg-5">
+                        <div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 ms-lg-auto">
+                    <img class="d-none d-lg-inline-block" src="https://bafybeih3hhp3vd6gmwzjzrn2jhowkwhtefuemrz5y3uvjss6uthubelpqy.ipfs.w3s.link/fazendeiro.png" alt="Servidor Illustration">
                 </div>
             </div>
         </div>
-    </div>    
-    <!-- Section -->    
-    
-    <!-- End of section -->
+    </div>
 
 {% endblock content %}
 
