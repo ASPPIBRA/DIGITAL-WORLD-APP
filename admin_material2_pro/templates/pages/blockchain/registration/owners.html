@@ -1,0 +1,420 @@
+{% load static %}
+
+<div class="container-fluid py-4">
+    <div class="row mt-4">
+      <!-- Card 1 Owner-->
+      <div class="col-lg-2">
+        <div class="card mt-4" data-animation="true">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <a class="d-block blur-shadow-image">
+              <img src="{% static 'assets/img/ivan.jpg' %}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+            </a>
+            <div class="colored-shadow" style="background-image: url(&quot;{% static 'assets/img/ivan.jpg' %}&quot;);"></div>
+          </div>
+          <div class="card-body text-center">
+            <div class="mt-n6 mx-auto">
+              <button class="btn bg-gradient-primary btn-sm mb-0 me-2" data-bs-toggle="collapse" href="#collapseExample1"  aria-expanded="false" aria-controls="collapseExample1" type="button" name="button">Edit</button>
+              <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+            </div>
+          </div>
+          <h5 class="font-weight-normal mt-4">
+            Proprietário
+          </h5>
+          <p class="mb-0">
+            Bond
+          </p>
+          <div class="collapse" id="collapseExample1">
+            <div class="card">
+              <div class="card-body pt-2">
+                <div class="input-group input-group-dynamic">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="RG" class="form-label">RG</label>
+                      <input type="text" class="form-control" id="RG">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="CPF" class="form-label">CPF</label>
+                      <input type="text" class="form-control" id="CPF">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-static">
+                      <label>Date of birth</label>
+                      <input class="form-control datetimepicker" type="text" data-input>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-dynamic mt-4">
+                  <label class="form-label">Starting Files</label>
+                  <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-0">Cancel</button>
+                  <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-0 me-2">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 Owner-->
+      <div class="col-lg-2">
+        <div class="card mt-4" data-animation="true">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <a class="d-block blur-shadow-image">
+              <img src="{% static 'assets/img/ivana-squares.jpg' %}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+            </a>
+            <div class="colored-shadow" style="background-image: url(&quot;{% static 'assets/img/ivana-squares.jpg' %}&quot;);"></div>
+          </div>
+          <div class="card-body text-center">
+            <div class="mt-n6 mx-auto">
+              <button class="btn bg-gradient-primary btn-sm mb-0 me-2" data-bs-toggle="collapse" href="#collapseExample2"  aria-expanded="false" aria-controls="collapseExample2" type="button" name="button">Edit</button>
+              <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+            </div>
+          </div>
+          <h5 class="font-weight-normal mt-4">
+            Proprietário
+          </h5>
+          <p class="mb-0">
+            Helana
+          </p>
+          <div class="collapse" id="collapseExample2">
+            <div class="card">
+              <div class="card-body pt-2">
+                <div class="input-group input-group-dynamic">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="RG" class="form-label">RG</label>
+                      <input type="text" class="form-control" id="RG">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="CPF" class="form-label">CPF</label>
+                      <input type="text" class="form-control" id="CPF">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-static">
+                      <label>Date of birth</label>
+                      <input class="form-control datetimepicker" type="text" data-input>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-dynamic mt-4">
+                  <label class="form-label">Starting Files</label>
+                  <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-0">Cancel</button>
+                  <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-0 me-2">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 Heir-->
+      <div class="col-lg-2">
+        <div class="card mt-4" data-animation="true">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <a class="d-block blur-shadow-image">
+              <img src="{% static 'assets/img/avatar.jpg' %}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+            </a>
+            <div class="colored-shadow" style="background-image: url(&quot;{% static 'assets/img/avatar.jpg' %}&quot;);"></div>
+          </div>
+          <div class="card-body text-center">
+            <div class="mt-n6 mx-auto">
+              <button class="btn bg-gradient-primary btn-sm mb-0 me-2" data-bs-toggle="collapse" href="#collapseExample3"  aria-expanded="false" aria-controls="collapseExample3" type="button" name="button">Edit</button>
+              <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+            </div>
+          </div>
+          <h5 class="font-weight-normal mt-4">
+            Herdeiro
+          </h5>
+          <p class="mb-0">
+            Milyne
+          </p>
+          <div class="collapse" id="collapseExample3">
+            <div class="card">
+              <div class="card-body pt-2">
+                <div class="input-group input-group-dynamic">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="RG" class="form-label">RG</label>
+                      <input type="text" class="form-control" id="RG">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="CPF" class="form-label">CPF</label>
+                      <input type="text" class="form-control" id="CPF">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-static">
+                      <label>Date of birth</label>
+                      <input class="form-control datetimepicker" type="text" data-input>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-dynamic mt-4">
+                  <label class="form-label">Starting Files</label>
+                  <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-0">Cancel</button>
+                  <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-0 me-2">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 Heir-->
+      <div class="col-lg-2">
+        <div class="card mt-4" data-animation="true">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <a class="d-block blur-shadow-image">
+              <img src="{% static 'assets/img/avatar.jpg' %}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+            </a>
+            <div class="colored-shadow" style="background-image: url(&quot;{% static 'assets/img/avatar.jpg' %}&quot;);"></div>
+          </div>
+          <div class="card-body text-center">
+            <div class="mt-n6 mx-auto">
+              <button class="btn bg-gradient-primary btn-sm mb-0 me-2" data-bs-toggle="collapse" href="#collapseExample4"  aria-expanded="false" aria-controls="collapseExample4" type="button" name="button">Edit</button>
+              <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+            </div>
+          </div>
+          <h5 class="font-weight-normal mt-4">
+            Herdeiro
+          </h5>
+          <p class="mb-0">
+            Milyne
+          </p>
+          <div class="collapse" id="collapseExample4">
+            <div class="card">
+              <div class="card-body pt-2">
+                <div class="input-group input-group-dynamic">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="RG" class="form-label">RG</label>
+                      <input type="text" class="form-control" id="RG">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="CPF" class="form-label">CPF</label>
+                      <input type="text" class="form-control" id="CPF">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-static">
+                      <label>Date of birth</label>
+                      <input class="form-control datetimepicker" type="text" data-input>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-dynamic mt-4">
+                  <label class="form-label">Starting Files</label>
+                  <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-0">Cancel</button>
+                  <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-0 me-2">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 Heir-->
+      <div class="col-lg-2">
+        <div class="card mt-4" data-animation="true">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <a class="d-block blur-shadow-image">
+              <img src="{% static 'assets/img/avatar.jpg' %}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+            </a>
+            <div class="colored-shadow" style="background-image: url(&quot;{% static 'assets/img/avatar.jpg' %}&quot;);"></div>
+          </div>
+          <div class="card-body text-center">
+            <div class="mt-n6 mx-auto">
+              <button class="btn bg-gradient-primary btn-sm mb-0 me-2" data-bs-toggle="collapse" href="#collapseExample5"  aria-expanded="false" aria-controls="collapseExample5" type="button" name="button">Edit</button>
+              <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+            </div>
+          </div>
+          <h5 class="font-weight-normal mt-4">
+            Herdeiro
+          </h5>
+          <p class="mb-0">
+            Milyne
+          </p>
+          <div class="collapse" id="collapseExample5">
+            <div class="card">
+              <div class="card-body pt-2">
+                <div class="input-group input-group-dynamic">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="RG" class="form-label">RG</label>
+                      <input type="text" class="form-control" id="RG">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="CPF" class="form-label">CPF</label>
+                      <input type="text" class="form-control" id="CPF">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-static">
+                      <label>Date of birth</label>
+                      <input class="form-control datetimepicker" type="text" data-input>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-dynamic mt-4">
+                  <label class="form-label">Starting Files</label>
+                  <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-0">Cancel</button>
+                  <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-0 me-2">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 Heir-->
+      <div class="col-lg-2">
+        <div class="card mt-4" data-animation="true">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <a class="d-block blur-shadow-image">
+              <img src="{% static 'assets/img/avatar.jpg' %}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+            </a>
+            <div class="colored-shadow" style="background-image: url(&quot;{% static 'assets/img/avatar.jpg' %}&quot;);"></div>
+          </div>
+          <div class="card-body text-center">
+            <div class="mt-n6 mx-auto">
+              <button class="btn bg-gradient-primary btn-sm mb-0 me-2" data-bs-toggle="collapse" href="#collapseExample6"  aria-expanded="false" aria-controls="collapseExample6" type="button" name="button">Edit</button>
+              <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+            </div>
+          </div>
+          <h5 class="font-weight-normal mt-4">
+            Herdeiro
+          </h5>
+          <p class="mb-0">
+            Milyne
+          </p>
+          <div class="collapse" id="collapseExample6">
+            <div class="card">
+              <div class="card-body pt-2">
+                <div class="input-group input-group-dynamic">
+                  <label for="projectName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="projectName">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="RG" class="form-label">RG</label>
+                      <input type="text" class="form-control" id="RG">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-dynamic">
+                      <label for="CPF" class="form-label">CPF</label>
+                      <input type="text" class="form-control" id="CPF">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-static">
+                      <label>Date of birth</label>
+                      <input class="form-control datetimepicker" type="text" data-input>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-dynamic mt-4">
+                  <label class="form-label">Starting Files</label>
+                  <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-0">Cancel</button>
+                  <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-0 me-2">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

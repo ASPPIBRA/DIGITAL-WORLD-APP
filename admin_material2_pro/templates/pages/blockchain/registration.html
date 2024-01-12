@@ -1,0 +1,853 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Header CEO -->
+{% include 'pages/blockchain/registration/header.html' %}
+<!-- Owners -->
+{% include 'pages/blockchain/registration/owners.html' %}
+<!-- Georeferencing -->
+<div class="container-fluid py-4">
+   <div class="row">
+      <div class="col-12">
+         <div class="card">
+            <div class="card-body">
+               <h5 class="mb-4">Address</h5>
+               <div class="row">
+                  <div class="col-lg-10 mx-auto">
+                     <div class="col-12 d-flex justify-content-center py-4">
+                        <iframe class="map rounded" id="gmap_canvas" src="https://maps.google.com/maps?q=-22.4795567,-44.2864697&t=&z=8&ie=UTF8&iwloc=&output=embed"></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-7 mx-auto mt-4">
+                  <div class="container border rounded p-3">
+                     <h5 class="font-weight-bolder">Product Information</h5>
+                     <div class="row mt-4">
+                        <div class="col-12 col-sm-6">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Country</label>
+                              <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">State</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row mt-4">
+                        <div class="col-12 col-sm-6">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Municipality</label>
+                              <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Neighborhood</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row mt-4">
+                        <div class="col-4">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Street</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-4">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Block</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-4">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Lot</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row mt-4">
+                        <div class="col-12 col-sm-6">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Latitude</label>
+                              <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Longitude</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-6">
+                           <label class="mt-4 ms-0">Category</label>
+                           <select class="form-control" name="choices-category" id="choices-category-edit">
+                              <option value="Choice 1" selected="">Urbano</option>
+                              <option value="Choice 2">Rural</option>
+                              <option value="Choice 3">Litorâneo</option>
+                              <option value="Choice 4">Montanhoso</option>
+                              <option value="Choice 5">Inland</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="d-flex justify-content-end mt-4">
+                        <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                        <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- City hall -->
+<div class="container-fluid py-4">
+   <div class="row mt-4">
+      <div class="col-sm-6">
+         <div class="card h-100">
+            <div class="card-header pb-0 p-3">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h6 class="mb-0">City Hall</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-body pt-3">
+                  <div class="row mt-4">
+                     <div class="col-12 col-sm-6">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Country</label>
+                           <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">State</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mt-4">
+                     <div class="col-12 col-sm-6">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Municipality</label>
+                           <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Neighborhood</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mt-4">
+                     <div class="col-4">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Street</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-4">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Block</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-4">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Lot</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="input-group input-group-dynamic mt-4">
+                     <label class="form-label">Proof of IPTU</label>
+                     <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                        <div class="fallback">
+                           <input name="file" type="file" multiple />
+                        </div>
+                     </form>
+                  </div>
+                  <div class="d-flex justify-content-end mt-4">
+                     <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                     <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Notary's Office -->
+      <div class="col-sm-6 mt-sm-0 mt-4">
+         <div class="card h-100">
+            <div class="card-header pb-0 p-3">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h6 class="mb-0">Notary's Office</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-body pt-3">
+                  <div class="row mt-4">
+                     <div class="col-12 col-sm-6">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Country</label>
+                           <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">State</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mt-4">
+                     <div class="col-12 col-sm-6">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Municipality</label>
+                           <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Neighborhood</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mt-4">
+                     <div class="col-4">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Street</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-4">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Block</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                     <div class="col-4">
+                        <div class="input-group input-group-dynamic">
+                           <label class="form-label">Lot</label>
+                           <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="input-group input-group-dynamic mt-4">
+                     <label class="form-label">Notary Certificate of the Property</label>
+                     <form action="/file-upload" class="form-control dropzone" id="dropzone">
+                        <div class="fallback">
+                           <input name="file" type="file" multiple />
+                        </div>
+                     </form>
+                  </div>
+                  <div class="d-flex justify-content-end mt-4">
+                     <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                     <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Property -->
+<div class="container-fluid py-4">
+   <div class="row">
+      <div class="col-12">
+         <div class="card">
+            <div class="card-body">
+               <h5 class="mb-4">Photos of the Property</h5>
+               <div class="row">
+                  <div class="col-xl-5 col-lg-6 text-center">
+                     <img class="w-100 border-radius-lg shadow-lg mx-auto" src="{% static 'assets/img/blockchain/escritura/f.casa.jpg' %}" alt="chair">
+                     <div class="my-gallery d-flex mt-4 pt-2" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-2.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/products/product-details-2.jpg' %}" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-3.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/products/product-details-3.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-4.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/products/product-details-4.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-5.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/products/product-details-5.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                     </div>
+                     <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                        <!-- Background of PhotoSwipe.It's a separate element, as animating opacity is faster than rgba(). -->
+                        <div class="pswp__bg"></div>
+                        <!-- Slides wrapper with overflow:hidden. -->
+                        <div class="pswp__scroll-wrap">
+                           <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                           <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                           <div class="pswp__container">
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                           </div>
+                           <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                           <div class="pswp__ui pswp__ui--hidden">
+                              <div class="pswp__top-bar">
+                                 <!--  Controls are self-explanatory. Order can be changed. -->
+                                 <div class="pswp__counter"></div>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--close">Close (Esc)</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--fs">Fullscreen</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--left">Prev
+                                 </button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--right">Next
+                                 </button>
+                                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                                 <!-- element will get class pswp__preloader--active when preloader is running -->
+                                 <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                       <div class="pswp__preloader__cut">
+                                          <div class="pswp__preloader__donut"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                 <div class="pswp__share-tooltip"></div>
+                              </div>
+                              <div class="pswp__caption">
+                                 <div class="pswp__caption__center"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 mx-auto">
+                     <h3 class="mt-lg-0 mt-4">Information</h3>
+                     <div class="row mt-4">
+                        <div class="col-6 mb-4">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label fs-8">RER Number</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Square Meter M²</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-6">
+                           <div class="input-group input-group-dynamic">
+                              <label class="form-label">Price</label>
+                              <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+                           </div>
+                        </div>
+                        <div class="col-6 ">
+                           <select class="form-control" name="choices-sizes" id="choices-currency-edit">
+                              <option value="Choice 1" selected="">USD</option>
+                              <option value="Choice 2">EUR</option>
+                              <option value="Choice 3">GBP</option>
+                              <option value="Choice 4">CNY</option>
+                              <option value="Choice 5">INR</option>
+                              <option value="Choice 6">BTC</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-6">
+                           <label class="mt-4 ms-0">Category</label>
+                           <select class="form-control" name="choices-house" id="choices-house-edit">
+                              <option value="Choice 1" selected="">Mansion</option>
+                              <option value="Choice 2">Chalet</option>
+                              <option value="Choice 3">House</option>
+                              <option value="Choice 4">Giardini</option>
+                              <option value="Choice 5">Loft</option>
+                              <option value="Choice 6">Flat</option>
+                              <option value="Choice 7">Kitnet</option>
+                              <option value="Choice 8">Townhouse</option>
+                              <option value="Choice 9">Semi-detached house</option>
+                              <option value="Choice 10">Apartment</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-12">
+                           <label class="mt-4">Tags</label>
+                           <select class="form-control" name="choices-tags" id="choices-tags-edit" multiple>
+                              <option value="Choice 1" selected>Living room</option>
+                              <option value="Choice 2">Kitchen</option>
+                              <option value="Choice 3">Room</option>
+                              <option value="Choice 4">Suite</option>
+                              <option value="Choice 5">Closet</option>
+                              <option value="Choice 6">Bathroom</option>
+                              <option value="Choice 7">Dining room</option>
+                              <option value="Choice 8">Playroom</option>
+                              <option value="Choice 9">Movie theater</option>
+                              <option value="Choice 10">Gym room</option>
+                              <option value="Choice 11">Party room</option>
+                              <option value="Choice 12">Desk</option>
+                              <option value="Choice 13">Laundry</option>
+                              <option value="Choice 14">Garage</option>
+                              <option value="Choice 15">Yard</option>
+                              <option value="Choice 16">Pool</option>
+                           </select>
+                        </div>
+                     </div>
+                     <form action="/file-upload" class="form-control border dropzone" id="dropzone">
+                        <div class="fallback">
+                           <input name="file" type="file" multiple />
+                        </div>
+                     </form>
+                     <div class="d-flex justify-content-end mt-4">
+                        <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                        <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Topographic -->
+<div class="container-fluid py-4">
+   <div class="row">
+      <div class="col-12">
+         <div class="card">
+            <div class="card-body">
+               <h5 class="mb-4">Topographic Plan</h5>
+               <div class="row">
+                  <div class="col-xl-5 col-lg-6 text-center">
+                     <img class="w-100 border-radius-lg shadow-lg mx-auto" src="{% static 'assets/img/blockchain/escritura/topografia/topografia2.jpg' %}" alt="chair">
+                     <div class="my-gallery d-flex mt-4 pt-2" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-2.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/topografia/topografia.jpg' %}" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-3.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/topografia/topografia.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-4.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/topografia/topografia.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-5.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/topografia/topografia.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                     </div>
+                     <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                        <!-- Background of PhotoSwipe.It's a separate element, as animating opacity is faster than rgba(). -->
+                        <div class="pswp__bg"></div>
+                        <!-- Slides wrapper with overflow:hidden. -->
+                        <div class="pswp__scroll-wrap">
+                           <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                           <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                           <div class="pswp__container">
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                           </div>
+                           <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                           <div class="pswp__ui pswp__ui--hidden">
+                              <div class="pswp__top-bar">
+                                 <!--  Controls are self-explanatory. Order can be changed. -->
+                                 <div class="pswp__counter"></div>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--close">Close (Esc)</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--fs">Fullscreen</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--left">Prev
+                                 </button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--right">Next
+                                 </button>
+                                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                                 <!-- element will get class pswp__preloader--active when preloader is running -->
+                                 <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                       <div class="pswp__preloader__cut">
+                                          <div class="pswp__preloader__donut"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                 <div class="pswp__share-tooltip"></div>
+                              </div>
+                              <div class="pswp__caption">
+                                 <div class="pswp__caption__center"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 mx-auto">
+                     <h3 class="mt-lg-0 mt-4">Minimal Bar Stool</h3>
+                     <div class="row mb-2">
+                        <div class="col-sm-12">
+                           <label class="mt-4">Description</label>
+                           <p class="form-text text-muted text-xs ms-1 d-inline">
+                              (optional)
+                           </p>
+                           <div id="edit-deschiption-edit" class="h-50">
+                              Long sleeves black denim jacket with a twisted design. Contrast stitching. Button up closure. White arrow prints on the back.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <form action="/file-upload" class="form-control border dropzone" id="dropzone">
+                              <div class="fallback">
+                                 <input name="file" type="file" multiple />
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="d-flex justify-content-end mt-4">
+                        <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                        <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Zoning -->
+<div class="container-fluid py-4">
+   <div class="row">
+      <div class="col-12">
+         <div class="card">
+            <div class="card-body">
+               <h5 class="mb-4">Zoning Plan</h5>
+               <div class="row">
+                  <div class="col-xl-5 col-lg-6 text-center">
+                     <img class="w-100 border-radius-lg shadow-lg mx-auto" src="{% static 'assets/img/blockchain/escritura/zoneamento/zoneamento.jpg' %}" alt="chair">
+                     <div class="my-gallery d-flex mt-4 pt-2" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-2.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/zoneamento/zoneamento.jpg' %}" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-3.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/zoneamento/zoneamento.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-4.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/zoneamento/zoneamento.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-5.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/zoneamento/zoneamento.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                     </div>
+                     <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                        <!-- Background of PhotoSwipe.It's a separate element, as animating opacity is faster than rgba(). -->
+                        <div class="pswp__bg"></div>
+                        <!-- Slides wrapper with overflow:hidden. -->
+                        <div class="pswp__scroll-wrap">
+                           <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                           <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                           <div class="pswp__container">
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                           </div>
+                           <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                           <div class="pswp__ui pswp__ui--hidden">
+                              <div class="pswp__top-bar">
+                                 <!--  Controls are self-explanatory. Order can be changed. -->
+                                 <div class="pswp__counter"></div>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--close">Close (Esc)</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--fs">Fullscreen</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--left">Prev
+                                 </button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--right">Next
+                                 </button>
+                                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                                 <!-- element will get class pswp__preloader--active when preloader is running -->
+                                 <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                       <div class="pswp__preloader__cut">
+                                          <div class="pswp__preloader__donut"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                 <div class="pswp__share-tooltip"></div>
+                              </div>
+                              <div class="pswp__caption">
+                                 <div class="pswp__caption__center"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 mx-auto">
+                     <h3 class="mt-lg-0 mt-4">Minimal Bar Stool</h3>
+                     <div class="row mb-2">
+                        <div class="col-sm-12">
+                           <label class="mt-4">Description</label>
+                           <p class="form-text text-muted text-xs ms-1 d-inline">
+                              (optional)
+                           </p>
+                           <div id="edit-deschiption-zoning-edit" class="h-50">
+                              Long sleeves black denim jacket with a twisted design. Contrast stitching. Button up closure. White arrow prints on the back.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <form action="/file-upload" class="form-control border dropzone" id="dropzone">
+                              <div class="fallback">
+                                 <input name="file" type="file" multiple />
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="d-flex justify-content-end mt-4">
+                        <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                        <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Architectural -->
+<div class="container-fluid py-4">
+   <div class="row">
+      <div class="col-12">
+         <div class="card">
+            <div class="card-body">
+               <h5 class="mb-4">Architectural Plan</h5>
+               <div class="row">
+                  <div class="col-xl-5 col-lg-6 text-center">
+                     <img class="w-100 border-radius-lg shadow-lg mx-auto" src="{% static 'assets/img/blockchain/escritura/arquitetonica/cf.casa.jpg' %}" alt="chair">
+                     <div class="my-gallery d-flex mt-4 pt-2" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-2.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/arquitetonica/tt.casa.jpg' %}" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-3.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/arquitetonica/cd.casa.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-4.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/arquitetonica/l.casa.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                        <figure class="ms-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                           <a href="{% static 'assets/img/products/product-details-5.jpg' %}" itemprop="contentUrl" data-size="500x600">
+                           <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{% static 'assets/img/blockchain/escritura/arquitetonica/t.casa.jpg' %}" itemprop="thumbnail" alt="Image description" />
+                           </a>
+                        </figure>
+                     </div>
+                     <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                        <!-- Background of PhotoSwipe.It's a separate element, as animating opacity is faster than rgba(). -->
+                        <div class="pswp__bg"></div>
+                        <!-- Slides wrapper with overflow:hidden. -->
+                        <div class="pswp__scroll-wrap">
+                           <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                           <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                           <div class="pswp__container">
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                           </div>
+                           <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                           <div class="pswp__ui pswp__ui--hidden">
+                              <div class="pswp__top-bar">
+                                 <!--  Controls are self-explanatory. Order can be changed. -->
+                                 <div class="pswp__counter"></div>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--close">Close (Esc)</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--fs">Fullscreen</button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--left">Prev
+                                 </button>
+                                 <button class="btn btn-white btn-sm pswp__button pswp__button--arrow--right">Next
+                                 </button>
+                                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                                 <!-- element will get class pswp__preloader--active when preloader is running -->
+                                 <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                       <div class="pswp__preloader__cut">
+                                          <div class="pswp__preloader__donut"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                 <div class="pswp__share-tooltip"></div>
+                              </div>
+                              <div class="pswp__caption">
+                                 <div class="pswp__caption__center"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 mx-auto">
+                     <h3 class="mt-lg-0 mt-4">Minimal Bar Stool</h3>
+                     <div class="row mb-2">
+                        <div class="col-sm-12">
+                           <label class="mt-4">Description</label>
+                           <p class="form-text text-muted text-xs ms-1 d-inline">
+                              (optional)
+                           </p>
+                           <div id="edit-deschiption-architectural-edit" class="h-50">
+                              Long sleeves black denim jacket with a twisted design. Contrast stitching. Button up closure. White arrow prints on the back.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <form action="/file-upload" class="form-control border dropzone" id="dropzone">
+                              <div class="fallback">
+                                 <input name="file" type="file" multiple />
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="d-flex justify-content-end mt-4">
+                        <button type="button" name="button" class="btn btn-outline-dark btn-sm mb-2 me-2">Cancel</button>
+                        <button type="button" name="button" class="btn bg-gradient-primary btn-sm mb-2">Confirm</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% include 'includes/footer.html' %}
+{% endblock content %}
+{% block extra_js %}
+<script src="{% static 'assets/js/plugins/multistep-form.js' %}"></script>
+<script src="{% static 'assets/js/plugins/dropzone.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/flatpickr.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/choices.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/quill.min.js' %}"></script>
+<script>
+   if (document.querySelector('.datetimepicker')) {
+     flatpickr('.datetimepicker', {
+       allowInput: true
+     }); // flatpickr
+   }
+
+
+   if (document.getElementById('edit-deschiption-edit')) {
+     var quill = new Quill('#edit-deschiption-edit', {
+       theme: 'snow' // Specify theme in configuration
+     });
+   };
+
+   if (document.getElementById('edit-deschiption-architectural-edit')) {
+     var quill = new Quill('#edit-deschiption-architectural-edit', {
+       theme: 'snow' // Specify theme in configuration
+     });
+   };
+
+   if (document.getElementById('edit-deschiption-zoning-edit')) {
+     var quill = new Quill('#edit-deschiption-zoning-edit', {
+       theme: 'snow' // Specify theme in configuration
+     });
+   };
+
+   if (document.getElementById('choices-category-edit')) {
+     var element = document.getElementById('choices-category-edit');
+     const example = new Choices(element, {
+       searchEnabled: false
+     });
+   };
+
+   if (document.getElementById('choices-sizes')) {
+     var element = document.getElementById('choices-sizes');
+     const example = new Choices(element, {
+       searchEnabled: false
+     });
+   };
+
+   if (document.getElementById('choices-house-edit')) {
+     var element = document.getElementById('choices-house-edit');
+     const example = new Choices(element, {
+       searchEnabled: false
+     });
+   };
+
+   if (document.getElementById('choices-currency-edit')) {
+     var element = document.getElementById('choices-currency-edit');
+     const example = new Choices(element, {
+       searchEnabled: false
+     });
+   };
+
+   if (document.getElementById('choices-tags-edit')) {
+     var tags = document.getElementById('choices-tags-edit');
+     const examples = new Choices(tags, {
+       removeItemButton: true
+     });
+
+     examples.setChoices(
+       [{
+           value: 'One',
+           label: 'Expired',
+           disabled: true
+         },
+         {
+           value: 'Two',
+           label: 'Out of Stock',
+           selected: true
+         }
+       ],
+       'value',
+       'label',
+       false,
+     );
+   }
+</script>
+<script>
+   var win = navigator.platform.indexOf('Win') > -1;
+   if (win && document.querySelector('#sidenav-scrollbar')) {
+     var options = {
+       damping: '0.5'
+     }
+     Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+   }
+</script>
+{% endblock extra_js %}

@@ -5,18 +5,13 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 COPY requirements.txt .
-
-# install python dependenciestrash:///apps.3
-
-
+# install python dependencies
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY env.sample .env
-
 COPY . .
 
-RUN python manage.py makemigrations 
+# running migrations
 RUN python manage.py migrate
 
 # gunicorn

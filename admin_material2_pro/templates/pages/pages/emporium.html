@@ -1,0 +1,137 @@
+{% extends 'layouts/base-fullscreen.html' %}
+{% load static %}
+
+{% block content %}  
+
+  <header class="page-header bg-gradient-dark position-relative m-3 border-radius-xl min-vh-50">
+    <div class="video-background">
+      <video autoplay muted loop id="video-bg">
+        <source src="#" type="video/mp4">     
+      </video>
+    </div>
+  </header>  
+  <div class="container-fluid px-5 my-6">
+    <div class="card mt-n8"> 
+      <body>
+        <!-- Header-->
+        <header>
+          <div class="container">
+            <div class="row mt-2">
+              <ul class="nav nav-pills nav-fill" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#gucci-tabs-simple" role="tab" aria-controls="profile" aria-selected="true">Gucci</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#balenciaga-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Balenciaga</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#prada-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Prada</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#versace-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Versace</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#fendi-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Fendi</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#burberry-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Burberry</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#dolce-&-gabbana-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Dolce & Gabbana</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#balmain-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Balmain</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#lacoste-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Lacoste</a>
+                </li>
+              </ul>
+            </div>                
+          </div>
+        </header>
+        <div class="row mt-5">
+          <div class="col-8 mx-auto text-center">
+            <h3 class="opacity-5">Here you will find the main luxury brands</h3>
+          </div>
+        </div>
+                
+        <!-- Content section 1-->
+        <section class="py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="https://cartier.vteximg.com.br/arquivos/ids/205501-1000-1000/FJ050000_1.png?v=637274205172530000" alt="Perfumery Image"></div>
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                  <h2 class="display-4">The best of perfumery</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+                <div class="text-center text-lg-left">
+                  <button class="btn btn-primary" type="button">Button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Content section 2 -->
+        <section class="bg-light py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="https://br.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pochette-m%C3%A9tis-couro-monogram-empreinte-bicolor-bolsas--M45773_PM2_Front%20view.png?wid=730&hei=730" alt="Luxury Items Image"></div>
+              </div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <h2 class="display-4">The best luxury items</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+                <div class="text-center text-lg-right">
+                  <button class="btn btn-primary" type="button">Button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Content section 3 -->
+        <section class="py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="https://www.cartier.com/content/images/cms/ycm/resource/blob/40158/69219087b2b0aa4dd69711b3cb6945c1/side-module-picture-data.png/w750.jpg" alt="Jewelry Image"></div>
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                  <h2 class="display-4">The highest level of jewelry</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+                <div class="text-center text-lg-left">
+                  <button class="btn btn-primary" type="button">Button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>    
+      </body>
+    </div>
+  </div>      
+
+{% endblock content %}
+
+{% block footer %}
+  {% include 'includes/footer-fullscreen.html' %}
+{% endblock footer %}
+  
+{% block extra_js %}
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+{% endblock extra_js %}

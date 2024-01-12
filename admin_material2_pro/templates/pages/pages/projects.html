@@ -1,0 +1,103 @@
+{% extends 'layouts/base-fullscreen.html' %}
+
+{% load static %}
+
+{% block content %}  
+      
+    <header class="page-header bg-dark py-5 position-relative m-3 border-radius-xl min-vh-50">
+        <span class="mask bg-gradient-dark opacity-0"></span>
+        <div class="container py-7 px-5 postion-relative z-index-2">
+          <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+              <h1 class="text-white">Projects</h1>
+              <p class="fs-4 mb-4 fst-italic">...</p>          
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="container-fluid px-5 my-6">
+        <div class="card mt-n8"> 
+            <body>                
+                <!-- Header-->                             
+                <!-- Page Content-->
+                <section class="py-5">
+                    <div class="container px-5 my-5">
+                        <div class="text-center mb-5">
+                            <h1 class="fw-bolder">Our Work</h1>
+                            <p class="lead fw-normal text-muted mb-0">Company portfolio</p>
+                        </div>                        
+                        <div class="row gx-5">
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-5">
+                                    <h5 class="card-title">Card title</h5>
+                                    <img class="img-fluid rounded-3 mb-3" src="https://bafkreia4xvh6ugvj4z5jgrhgrmndncdtyjxcofrazdqxkafhuqbrmascqy.ipfs.w3s.link/" alt="..." />
+                                    <a class="btn btn-lg btn-primary" href="{% url 'project' %}">LEARN MORE</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-5">
+                                    <h5 class="card-title">Card title</h5>
+                                    <img class="img-fluid rounded-3 mb-3" src="https://bafkreicq5uvu6mmwdme63roi43im5qopo2ma4qefxn2ue5hmmfvrfhpzza.ipfs.w3s.link/" alt="..." />
+                                    <a class="btn btn-lg btn-primary" href="{% url 'project' %}">LEARN MORE</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-5 mb-lg-0">
+                                    <h5 class="card-title">Card title</h5>
+                                    <img class="img-fluid rounded-3 mb-3" src="https://bafkreify5qvk4sx3oaz563pnucnjpjmxe7etgxz4sn7k4y2majng2ohpjm.ipfs.w3s.link/" alt="..." />
+                                    <a class="btn btn-lg btn-primary" href="{% url 'project' %}">LEARN MORE</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <h5 class="card-title">Card title</h5>
+                                    <img class="img-fluid rounded-3 mb-3" src="https://bafkreidne54i2zjqqq67vxwyfss64m2r7xtvbfyb45pllusqp6hy3vbjmq.ipfs.w3s.link/" alt="..." />                                    
+                                    <a class="btn btn-lg btn-primary" href="{% url 'project' %}">LEARN MORE</a>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-5 bg-light">
+                    <div class="container px-5 my-5">
+                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                        <a class="btn btn-lg btn-primary" href="#!">Contact us</a>
+                    </div>
+                </section>                                       
+            </body>
+        </div>         
+    </div>   
+
+{% endblock content %}
+
+{% block footer %}
+
+  {% include 'includes/footer-fullscreen.html' %}
+
+{% endblock footer %}
+
+
+{% block extra_js %}
+
+  <script src="{% static 'assets/js/plugins/parallax.min.js' %}"></script>
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.onscroll = debounce(function() {
+        var scrollPosition = window.pageYOffset;
+        var bgParallax = document.querySelector('.page-header');
+        var oVal = (window.scrollY / 3);
+        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+      }, 6);
+    }
+  </script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+{% endblock extra_js %}

@@ -1,0 +1,1547 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block body %}{% endblock body %}
+
+{% block content %}
+
+  <div class="container-fluid py-4">
+    <div class="row">
+      <div class="col-lg-12 position-relative z-index-2">
+        <div class="card mb-4 ">
+          <div class="d-flex">
+            <div class="icon icon-shape icon-lg bg-gradient-success shadow text-center border-radius-xl mt-n3 ms-4">
+              <i class="material-icons opacity-10" aria-hidden="true">language</i>
+            </div>
+            <h6 class="mt-3 mb-2 ms-3 ">Market</h6>
+          </div>
+          <div class="card-body p-3">            
+            <div class="row">              
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container" style="height:100%;width:100%">
+                <div id="tradingview_7ad2c" style="height:calc(100% - 32px);width:100%"></div>                
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget(
+                {
+                "autosize": true,
+                "symbol": "BINANCE:BTCUSD",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "br",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_7ad2c"
+              }
+                );
+                </script>
+              </div>
+              <!-- TradingView Widget END -->              
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-lg-4 col-md-6 mt-4 mb-4">
+            <div class="card z-index-2 ">
+              <div class="card-header p-3 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>                  
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                  {
+                  "symbol": "FX_IDC:USDBRL",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "br",
+                  "dateRange": "ALL",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                  </script>
+                </div>
+                <!-- TradingView Widget END -->                
+              </div>              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mb-4">
+            <div class="card z-index-2  ">
+              <div class="card-header p-3 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>                  
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                  {
+                  "symbol": "BINANCE:ETHUSDT",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "br",
+                  "dateRange": "ALL",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                  </script>
+                </div>
+                <!-- TradingView Widget END -->                  
+                
+              </div>                            
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mb-3">
+            <div class="card z-index-2 ">
+              <div class="card-header p-3 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>                  
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                  {
+                  "symbol": "BINANCE:BNBUSDT",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "br",
+                  "dateRange": "ALL",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                  </script>
+                </div>
+                <!-- TradingView Widget END -->           
+              </div>                            
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-4">
+          <ul class="nav nav-tabs" id="tableTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="table1-tab" data-toggle="tab" href="#table1" role="tab" aria-controls="table1" aria-selected="true">Table 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="table2-tab" data-toggle="tab" href="#table2" role="tab" aria-controls="table2" aria-selected="false">Table 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="table3-tab" data-toggle="tab" href="#table3" role="tab" aria-controls="table3" aria-selected="false">Table 3</a>
+            </li>
+            <!-- Add more tabs for additional table variations -->
+          </ul>
+        
+          <div class="tab-content" id="tableTabsContent">
+            <!-- Table 1 -->
+            <div class="tab-pane fade show active" id="table1" role="tabpanel" aria-labelledby="table1-tab">
+              <h3>Cryptocurrency Information</h3>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Search" id="searchInput1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" onclick="searchTable('table1')">Search</button>
+                </div>
+              </div>              
+              <div class="card">
+                <div class="table-responsive">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">24h %</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">7d %</th>                  
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Volume(24h)</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Market Cap</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20201110/87496d50-2408-43e1-ad4c-78b47b448a6a.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Bitcoin</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">60%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">60%</span>
+                          </div>
+                        </td>          
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+                        
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20201110/3a8c9fe6-2a76-4ace-aa07-415d994de6f0.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Ethereum</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$5,000</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Blockchain</span>
+                          </span>
+                        </td>
+                        
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20220218/94863af2-c980-42cf-a139-7b9f462a36c2.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">BNB</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$1,000</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Blockchain</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20230404/b2f0c70f-4fb2-4472-9fe7-480ad1592421.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Solana</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$14,000</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Blockchain</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Cardano</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,300</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Blockchain</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20220712/c9430233-f9ce-4a5b-b0e8-7d1217db7568.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Polygon</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Blockchain/L2</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20200922/3fc414d2-c33b-4c01-8138-0b0acac5657b.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Avalanche</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                                    
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20201110/1eda1f7f-585a-4f16-abd7-a7104221414a.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Chainlink</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20230404/8e0060bf-9aed-4003-aba3-3d2367c18215.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Polkadot</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Blockchain</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20210122/2b5c7d80-7bcd-4cfb-8bd9-d1760a752afc.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Tether</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$3,400</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Stablecoins</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20201110/4cf7d633-92fb-4d37-80ed-458c7d1ea410.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">USDC</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$3,400</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Stablecoins</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20200723/c311a421-02e1-42c1-b023-0af8977da4d7.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">DAI</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$3,400</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">Stablecoins</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/2280.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Filecoin</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20230404/cea89864-6528-415e-b045-6ddcd393f3e2.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">AAVE</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Uniswap</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">DEX</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20220126/3d0a3cb6-4ebf-417f-adef-694ab90c19ff.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Dydx</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20221222/f1dc6b39-65b6-4f56-a25f-0d0dc5183e79.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Pancakeswap</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">DEX</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/images/20200814/f8d49a7f-d950-4e26-922f-42b11bd95584.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Curve DAO</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20231017/c0a133ab-2233-4309-ab2a-f15713014180.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Trust Wallet</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/images/20191212/8d01ef47-63e6-47ac-8f6c-411ccb4e7a18.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Monero</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                              <img src="https://bin.bnbstatic.com/image/admin_mgs_image_upload/20201110/4d538dc7-6543-4bd0-ab9a-cfc37363cab8.png" class="avatar avatar-sm rounded-circle me-2">
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-xs">Zcash</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center">
+                            <span class="me-2 text-xs">100%</span>
+                          </div>
+                        </td>                  
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                        </td>
+                        <td>
+                          <span class="badge badge-dot me-4">
+                            <i class="bg-success"></i>
+                            <span class="text-dark text-xs">done</span>
+                          </span>
+                        </td>
+              
+                        <td class="align-middle">
+                          <button class="btn btn-link text-secondary mb-0">
+                            <span class="material-icons">
+                            more_vert
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+              
+                    </tbody>                    
+                  </table>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="javascript:;" tabindex="-1">
+                          <span class="material-icons">
+                            keyboard_arrow_left
+                          </span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="javascript:;">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="javascript:;">2</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript:;">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:;">
+                          <span class="material-icons">
+                            keyboard_arrow_right
+                          </span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>               
+                </div>
+              </div>
+            </div>
+        
+            <!-- Table 2 -->
+            <div class="tab-pane fade" id="table2" role="tabpanel" aria-labelledby="table2-tab">
+              <h3>Commodities Minerals</h3>
+              <div class="card">
+                <div class="table-responsive">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">24h %</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">7d %</th>                  
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Volume(24h)</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Market Cap</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="https://bafkreibwlwhzaom5hap43ydhsvcvfgscqo5qpapo7n576bhgpk3ctmhdwm.ipfs.w3s.link/" class="avatar avatar-sm rounded-circle me-2">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-xs">Gold</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>                  
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <i class="bg-success"></i>
+                          <span class="text-dark text-xs">done</span>
+                        </span>
+                      </td>
+            
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <span class="material-icons">
+                          more_vert
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="https://bafkreiaavt2cqqv5d36jfc23n3futebzpvxz4u5qbvld3qqqe53yclcvqe.ipfs.w3s.link/" class="avatar avatar-sm rounded-circle me-2">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-xs">Silver</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>                  
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <i class="bg-success"></i>
+                          <span class="text-dark text-xs">done</span>
+                        </span>
+                      </td>
+            
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <span class="material-icons">
+                          more_vert
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="https://bafkreigwwhh2cu3bmz2fljybaintquj4tibvf57ifkzx46zurronwvxsuy.ipfs.w3s.link/" class="avatar avatar-sm rounded-circle me-2">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-xs">Copper</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>                  
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <i class="bg-success"></i>
+                          <span class="text-dark text-xs">done</span>
+                        </span>
+                      </td>
+            
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <span class="material-icons">
+                          more_vert
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                  </table>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="javascript:;" tabindex="-1">
+                          <span class="material-icons">
+                            keyboard_arrow_left
+                          </span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="javascript:;">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="javascript:;">2</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript:;">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:;">
+                          <span class="material-icons">
+                            keyboard_arrow_right
+                          </span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Table 3 -->
+            <div class="tab-pane fade" id="table3" role="tabpanel" aria-labelledby="table3-tab">
+              <h3>Commodities Agrícolas</h3>
+              <div class="card">
+                <div class="table-responsive">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">24h %</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">7d %</th>                  
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Volume(24h)</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Market Cap</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                        <th></th>
+                      </tr>
+                    </thead>                
+                    <!-- Table 3 content goes here -->
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="https://bafkreic6pk3btutnqijjs3jsamvww5ccxrvj4dszhslxtzzrvgk3j3usmy.ipfs.w3s.link/" class="avatar avatar-sm rounded-circle me-2">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-xs">Corn</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>                  
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <i class="bg-success"></i>
+                          <span class="text-dark text-xs">done</span>
+                        </span>
+                      </td>
+            
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <span class="material-icons">
+                          more_vert
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="https://bafkreib4e3cqpq4bwf3rwnhf4j4vmitjb3fo3zmx4xkbaa2rrulefrze5m.ipfs.w3s.link/" class="avatar avatar-sm rounded-circle me-2">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-xs">Coffee</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>                  
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <i class="bg-success"></i>
+                          <span class="text-dark text-xs">done</span>
+                        </span>
+                      </td>
+            
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <span class="material-icons">
+                          more_vert
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="https://bafkreihhtci3cuk6lb6iixopn473m34f656ekhoanhneifevlzdv3irxhi.ipfs.w3s.link/" class="avatar avatar-sm rounded-circle me-2">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-xs">Fat ox</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="me-2 text-xs">100%</span>
+                        </div>
+                      </td>                  
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-normal mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <i class="bg-success"></i>
+                          <span class="text-dark text-xs">done</span>
+                        </span>
+                      </td>
+            
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <span class="material-icons">
+                          more_vert
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+                    <!-- ... -->
+                  </table>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="javascript:;" tabindex="-1">
+                          <span class="material-icons">
+                            keyboard_arrow_left
+                          </span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="javascript:;">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="javascript:;">2</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript:;">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:;">
+                          <span class="material-icons">
+                            keyboard_arrow_right
+                          </span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- Add more divs for additional table variations -->
+          </div>
+        </div>        
+      </div>
+    </div>
+
+    {% include 'includes/footer.html' %}
+
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+  <script src="{% static 'assets/js/plugins/chartjs.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins/world.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+{% endblock extra_js %}

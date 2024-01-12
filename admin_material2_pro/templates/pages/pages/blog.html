@@ -1,0 +1,313 @@
+{% extends 'layouts/base-fullscreen.html' %}
+
+{% load static %}
+
+{% block content %}
+  
+  <header class="page-header bg-dark py-5 position-relative m-3 border-radius-xl min-vh-50">
+    <span class="mask bg-gradient-dark opacity-0"></span>
+    <div class="container py-7 px-5 postion-relative z-index-2">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+          <h1 class="text-white">Our Blog</h1>
+          <p class="text-white">Immerse yourself in the dynamic world where agriculture, sustainability, technology and cryptocurrency converge. 
+            Our blog is your gateway to the insightful updates, analysis and trends shaping these interconnected markets.</p>          
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid px-5 my-6">
+    <div class="card mt-n8"> 
+      <body>
+        <!-- Responsive navbar-->
+        <header>
+          <div class="container">
+            <div class="row mt-2">
+              <ul class="nav nav-pills nav-fill" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#world-tabs-simple" role="tab" aria-controls="profile" aria-selected="true">World</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#technology-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Technology</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#politics-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Politics</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#environment-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Environment</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#agribusiness-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Agribusiness</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#crypto-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Crypto</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#ore-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Ore</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#energy-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">Energy</a>
+                  </li>
+              </ul>
+            </div>                
+          </div>
+        </header>
+    
+        <main role="main">      
+          <!-- Blog preview section-->
+          <section class="py-5">
+            <div class="container px-5 my-5">                
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Blog post title</h5></a>
+                                <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Kelly Rowan</div>
+                                            <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreibq6ivyvn33tvhsrimdfunyz6mip6fdyrpqylinqo47vrqx5wgog4.ipfs.w3s.link/" alt="Social Network" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Social Network</h5></a>
+                                <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Josiah Barclay</div>
+                                            <div class="text-muted">March 23, 2023 &middot; 4 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreigoyhmyekaupq2dk62egzbltj3nayciznv6nedpwqpz655hwvvfd4.ipfs.w3s.link/" alt="Blockchain" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Blockchain</h5></a>
+                                <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Evelyn Martinez</div>
+                                            <div class="text-muted">April 2, 2023 &middot; 10 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreide2kjwb4hoqskxm4r77inkuumqkoomnqvh6iqoyzi2nfhu6tdl74.ipfs.w3s.link/" alt="Reforestation" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Reforestation</h5></a>
+                                <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Kelly Rowan</div>
+                                            <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreibq6ivyvn33tvhsrimdfunyz6mip6fdyrpqylinqo47vrqx5wgog4.ipfs.w3s.link/" alt="Social Network" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Social Network</h5></a>
+                                <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Josiah Barclay</div>
+                                            <div class="text-muted">March 23, 2023 &middot; 4 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreibntjlr3tz5jrlb6uw4xdl3af25re752elytt4jyki3sjq6a4v3mm.ipfs.w3s.link/" alt="Cultiva Agro" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Cultiva Agro</h5></a>
+                                <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Evelyn Martinez</div>
+                                            <div class="text-muted">April 2, 2023 &middot; 10 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Blog post title</h5></a>
+                                <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Kelly Rowan</div>
+                                            <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreibq6ivyvn33tvhsrimdfunyz6mip6fdyrpqylinqo47vrqx5wgog4.ipfs.w3s.link/" alt="Social Network" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Social Network</h5></a>
+                                <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Josiah Barclay</div>
+                                            <div class="text-muted">March 23, 2023 &middot; 4 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top" src="https://bafkreigoyhmyekaupq2dk62egzbltj3nayciznv6nedpwqpz655hwvvfd4.ipfs.w3s.link/" alt="Blockchain" />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'post' %}"><h5 class="card-title mb-3">Blockchain</h5></a>
+                                <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Evelyn Martinez</div>
+                                            <div class="text-muted">April 2, 2023 &middot; 10 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+          </section>
+          
+          <!-- Pagination-->
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="javascript:;" tabindex="-1">
+                  <span class="material-icons">
+                    keyboard_arrow_left
+                  </span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="javascript:;">1</a></li>
+              <li class="page-item active"><a class="page-link" href="javascript:;">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:;">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:;">
+                  <span class="material-icons">
+                    keyboard_arrow_right
+                  </span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>    
+      </body>      
+    </div>  
+  </div>  
+
+{% endblock content %}
+
+{% block footer %}
+
+  {% include 'includes/footer-fullscreen.html' %}
+
+{% endblock footer %}
+
+{% block extra_js %}
+
+  <script src="{% static 'assets/js/plugins/parallax.min.js' %}"></script>
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.onscroll = debounce(function() {
+        var scrollPosition = window.pageYOffset;
+        var bgParallax = document.querySelector('.page-header');
+        var oVal = (window.scrollY / 3);
+        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+      }, 6);
+    }
+  </script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+{% endblock extra_js %}
